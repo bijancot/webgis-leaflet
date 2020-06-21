@@ -9,6 +9,7 @@
 	
 	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
 
@@ -42,7 +43,10 @@ var greenIcon = new L.Icon({
 });
 
 	var kavling= L.layerGroup();
-
+	var part = '<div class="columns">'+
+		'<div class="column">A</div>'+
+		'<div class="column">B</div>'+
+	'</div>';
 	L.marker([-7.900509, 112.6069513]).bindPopup('This is Littleton, CO.').addTo(kavling),
 	L.marker([-7.905609, 112.6122395]).bindPopup('This is Denver, CO.').addTo(kavling),
 	L.marker([39.73, -104.8]).bindPopup('This is Aurora, CO.').addTo(kavling),
@@ -50,6 +54,7 @@ var greenIcon = new L.Icon({
 
 	var apart= L.layerGroup();
 
+	
 	L.marker([39.61, -105.02], {icon: greenIcon}).bindPopup('This is Littleton, CO.').addTo(apart),
 	L.marker([39.74, -104.99], {icon: greenIcon}).bindPopup('This is Denver, CO.').addTo(apart),
 	L.marker([39.73, -104.8], {icon: greenIcon}).bindPopup('This is Aurora, CO.').addTo(apart),
@@ -86,8 +91,7 @@ var greenIcon = new L.Icon({
 		"Apartement": apart
 	};
 
-	L.control.layers(baseLayers).addTo(map);
-	L.control.layers(overlays).addTo(map);
+	L.control.layers(baseLayers, overlays).addTo(map);
 </script>
 
 
