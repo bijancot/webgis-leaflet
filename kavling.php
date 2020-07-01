@@ -6,11 +6,11 @@ L.marker([39.73, -104.8]).bindPopup('This is Aurora, CO.').addTo(kavling),
 L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.').addTo(kavling);";
 require('conn/koneksi.php');
 
-
+$jenis = "P002";
 $db = $mysqli->prepare("SELECT * FROM properti a join jenisProperti b on a.JenisID=b.JenisID where a.JenisID = '?'");
 $db->bind_param("s",$jenis);
 
-$jenis = "P002";
+
 $db->execute();
 $cos = $db->get_result();
 $res = $cos->fetch_all(MYSQLI_ASSOC);
