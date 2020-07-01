@@ -1,4 +1,19 @@
 <?php
+echo "var part_kav = '<h4>Judul </h4><div class=\"columns\">'+
+		'<div class=\"column\">' +
+		'<img src = \"https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/91400513_1553639021452975_5524976870795247616_n.png?_nc_cat=110&_nc_sid=730e14&_nc_eui2=AeF3Z5XcreiARhaAIR3lFBk8i4S9cKEyQ4KLhL1woTJDgjW1y9_p-osrlqnLwrxBLxlX95MDOg9MvMSQ2wqcufoN&_nc_ohc=w6KoWgus7VAAX-dK1mL&_nc_ht=scontent-sin6-2.xx&oh=1b5cea5b065fe627c23d040f57ab790a&oe=5F166FF5\"/>' +
+		'</div>'+
+		'<div class=\"column\">B</div>'+
+	'</div>';";
+
+	
+	echo "var customOptions_kav =
+        {
+        'maxWidth': '500',
+        'className' : 'custom_kav'
+        }";
+
+echo "var kavling = L.layerGroup();";
 
 $jenis = "P002";
 $db = $mysqli->prepare("SELECT * FROM properti a join jenisProperti b on a.JenisID=b.JenisID where a.JenisID = ?");
@@ -8,8 +23,23 @@ $db->execute();
 $cos = $db->get_result();
 $res = $cos->fetch_all(MYSQLI_ASSOC);
 
-sizeof($res);
+$count = 0;
 foreach ($res as $key => $sult) {
-    echo "L.marker([".$sult['Latitude'].",".$sult['Longitude']."]).bindPopup(part, customOptions).addTo(kavling);";
+    echo "var part_kav_$count = '<h4>Judul $count </h4><div class=\"columns\">'+
+		'<div class=\"column\">' +
+		'<img src = \"https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/91400513_1553639021452975_5524976870795247616_n.png?_nc_cat=110&_nc_sid=730e14&_nc_eui2=AeF3Z5XcreiARhaAIR3lFBk8i4S9cKEyQ4KLhL1woTJDgjW1y9_p-osrlqnLwrxBLxlX95MDOg9MvMSQ2wqcufoN&_nc_ohc=w6KoWgus7VAAX-dK1mL&_nc_ht=scontent-sin6-2.xx&oh=1b5cea5b065fe627c23d040f57ab790a&oe=5F166FF5\"/>' +
+		'</div>'+
+		'<div class=\"column\">$sult['NamaProperti']</div>'+
+	'</div>';";
+
+	
+	echo "var customOptions_kav_$count =
+        {
+        'maxWidth': '500',
+        'className' : 'custom_kav_$count'
+        }";
+    echo "L.marker([".$sult['Latitude'].",".$sult['Longitude']."]).bindPopup(part_kav_$count, customOptions_kav_$count).addTo(kavling);";
+
+    $count++;
 }
 ?>

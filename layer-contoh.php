@@ -1,6 +1,5 @@
 	<?php 
 		require 'conn/koneksi.php';
-		require 'layer/kavling.php';
 	?>
 <html>
 <head>
@@ -60,7 +59,7 @@
 	/* Contoh custom value untuk popup leafletjs, ini juga terhubung dengan bulmacss (untuk reponsive saja) 
 	class columns & column tidak bisa dirubah karena bawaan, height bisa dicustom (lihat baris 26-31)
 	*/
-	var part = '<div class="columns">'+
+	var part_kav = '<div class="columns">'+
 		'<div class="column">' +
 		'<img src = "https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/91400513_1553639021452975_5524976870795247616_n.png?_nc_cat=110&_nc_sid=730e14&_nc_eui2=AeF3Z5XcreiARhaAIR3lFBk8i4S9cKEyQ4KLhL1woTJDgjW1y9_p-osrlqnLwrxBLxlX95MDOg9MvMSQ2wqcufoN&_nc_ohc=w6KoWgus7VAAX-dK1mL&_nc_ht=scontent-sin6-2.xx&oh=1b5cea5b065fe627c23d040f57ab790a&oe=5F166FF5"/>' +
 		'</div>'+
@@ -68,10 +67,10 @@
 	'</div>';
 
 	/* custom option untuk popup ini bawaan dari leaflet tapi bisa dirubah */
-	var customOptions =
+	var customOptions_kav =
         {
         'maxWidth': '500',
-        'className' : 'custom'
+        'className' : 'custom_kav'
         }
 
 	// menambahkan marker
@@ -81,20 +80,7 @@
 	// L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.').addTo(kavling);
 	
 	<?php 
-		require 'kavling.php';
-
-		// $jenis = "P002";
-		// $db = $mysqli->prepare("SELECT * FROM properti a join jenisProperti b on a.JenisID=b.JenisID where a.JenisID = ?");
-		// $db->bind_param("s",$jenis);
-		// $db->execute();
-
-		// $cos = $db->get_result();
-		// $res = $cos->fetch_all(MYSQLI_ASSOC);
-
-		// sizeof($res);
-		// foreach ($res as $key => $sult) {
-		// 	echo "L.marker([".$sult['Latitude'].",".$sult['Longitude']."]).bindPopup(part, customOptions).addTo(kavling);\n";
-		// }
+			require 'layer/kavling.php';
 	?>
 
 	var apart= L.layerGroup();
