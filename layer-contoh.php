@@ -78,7 +78,7 @@
 	// L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.').addTo(kavling);
 	
 	<?php 
-			require 'layer/kavling.php';
+			require 'layer/rmhBersubsidi.php';
 	?>
 
 	var apart= L.layerGroup();
