@@ -1,7 +1,5 @@
-
-
 	<?php 
-		require 'kavling.php';
+		require 'layer/kavling.php';
 	?>
 <html>
 <head>
