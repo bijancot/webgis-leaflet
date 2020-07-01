@@ -17,6 +17,6 @@ var_dump($res);
 
 sizeof($res);
 foreach ($res as $key => $sult) {
-    echo "L.marker([-7.900509, 112.6069513]).bindPopup(part, customOptions).addTo(kavling)".";";
+    echo "L.marker([".$sult['Latitude'].",".$sult['Longitude']."]).bindPopup(part, customOptions).addTo(kavling);";
 }
 ?>
