@@ -110,7 +110,7 @@
 		var map = L.map('map', {
 		center: [-7.9089297, 112.5992162],
 		zoom: 14.25,
-		layers: [streets, kavling]
+		layers: [streets, rmhBersubsidi]
 	});
 	map.flyTo([-7.9089297, 112.5992162], 14.25);
 
@@ -122,7 +122,7 @@
 
 	// variabel penampung overlay (layer custom) untuk controller di tampilan peta 
 	var overlays = {
-		"Kavling": kavling,
+		"Rumah Bersubsidi": rmhBersubsidi,
 		"Apartement": apart
 	};
 
