@@ -22,8 +22,8 @@
 			margin: 0;
 		}
 		#map {
-			width: 600px;
-			height: 400px;
+			width: 100%;
+			height: 100vh;
 		}
 		.column, .columns{
 			min-width: 100px;
