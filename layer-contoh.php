@@ -44,7 +44,9 @@
 		zoom: 14,
 		layers: [streets, kavling]
 	});
-	
+
+	map.flyTo([-7.9786395, 112.5617424], 8)
+
 	/*contoh custom marker untuk leaflet sumber : https://github.com/pointhi/leaflet-color-markers 
 	untuk custom icon bisa pakai png lain tinggal ganti 'iconUrl' & shadowUrl */
 	var greenIcon = new L.Icon({
@@ -56,7 +58,6 @@
 	shadowSize: [41, 41]
 	});
 
-	map.flyTo([-7.9786395, 112.5617424], 8)
 	// map.setView(new L.LatLng(-7.9786395, 112.5617424), 8);
 	// variabel layergroup
 	var kavling= L.layerGroup();
