@@ -104,11 +104,11 @@
 
 		// inisialisasi atau pemanggilan peta
 		var map = L.map('map', {
-		center: [-7.9929426, 112.2833765],
-		zoom: 14,
+		center: [-7.9735409, 112.6200935],
+		zoom: 13.25,
 		layers: [streets, kavling]
 	});
-	map.flyTo([-7.9786395, 112.5617424], 14);
+	map.flyTo([-7.9735409, 112.6200935], 13.25);
 
 	// variabel penampung baselayers untuk controller di tampilan peta 
 	var baseLayers = {
