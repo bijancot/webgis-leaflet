@@ -1,4 +1,5 @@
 	<?php 
+		require 'conn/koneksi.php';
 		require 'layer/kavling.php';
 	?>
 <html>
