@@ -50,6 +50,8 @@
 	shadowSize: [41, 41]
 	});
 
+	map.flyTo([-7.9786395, 112.5617424], 8)
+	// map.setView(new L.LatLng(-7.9786395, 112.5617424), 8);
 	// variabel layergroup
 	var kavling= L.layerGroup();
 
