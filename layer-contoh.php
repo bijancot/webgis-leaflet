@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+
+
+<?php 
+		require 'kavling.php';
+?>
 <html>
 <head>
 	
@@ -80,7 +84,7 @@
 	<?php 
 		require 'kavling.php';
 
-		$jenis = "P002";
+		// $jenis = "P002";
 		// $db = $mysqli->prepare("SELECT * FROM properti a join jenisProperti b on a.JenisID=b.JenisID where a.JenisID = ?");
 		// $db->bind_param("s",$jenis);
 		// $db->execute();
