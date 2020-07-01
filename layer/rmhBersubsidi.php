@@ -23,6 +23,8 @@ foreach ($res as $key => $sult) {
 	echo "var customOptions_kav_".$count." =
         {
         'maxWidth': '800',
+        'maxheight': '800',
+        'minWidth': '800',
         'className' : 'custom_kav_".$count,"'
         }\n";
     echo "L.marker([".$sult['Latitude'].",".$sult['Longitude']."]).bindPopup(part_kav_".$count,", customOptions_kav_".$count.").addTo(rmhBersubsidi);";
