@@ -12,7 +12,6 @@ $db->bind_param("s",$jenis);
 
 $jenis = "P002";
 $db->execute();
-$db->fetchAll();
 
 var_dump($db);
 
