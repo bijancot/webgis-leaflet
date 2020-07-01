@@ -38,7 +38,13 @@
 <div id='map'></div>
 
 <script>
-
+	// inisialisasi atau pemanggilan peta
+	var map = L.map('map', {
+		center: [-7.9929426, 112.2833765],
+		zoom: 14,
+		layers: [streets, kavling]
+	});
+	
 	/*contoh custom marker untuk leaflet sumber : https://github.com/pointhi/leaflet-color-markers 
 	untuk custom icon bisa pakai png lain tinggal ganti 'iconUrl' & shadowUrl */
 	var greenIcon = new L.Icon({
@@ -102,12 +108,7 @@
 	var grayscale   = L.tileLayer(mbUrl, {id: 'mapbox/light-v9', tileSize: 512, zoomOffset: -1, attribution: mbAttr}),
 		streets  = L.tileLayer(mbUrl, {id: 'mapbox/streets-v11', tileSize: 512, zoomOffset: -1, attribution: mbAttr});
 
-	// inisialisasi atau pemanggilan peta
-	var map = L.map('map', {
-		center: [-7.9929426, 112.2833765],
-		zoom: 14,
-		layers: [streets, kavling]
-	});
+
 	
 	// variabel penampung baselayers untuk controller di tampilan peta 
 	var baseLayers = {
