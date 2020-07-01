@@ -14,8 +14,9 @@ $jenis = "P002";
 $db->execute();
 $res = $db->get_result();
 
+var_dump($res);
 foreach ($res as $key => $sult) {
-    echo $sult['longitude'];
+    echo $sult['Longitude'];
 }
 
 echo "L.marker([-7.900509, 112.6069513]).bindPopup(part, customOptions).addTo(kavling),
