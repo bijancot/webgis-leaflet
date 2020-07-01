@@ -108,8 +108,8 @@
 		zoom: 14,
 		layers: [streets, kavling]
 	});
-	map.flyTo([-7.9786395, 112.5617424], 8);
-	
+	map.flyTo([-7.9786395, 112.5617424], 14);
+
 	// variabel penampung baselayers untuk controller di tampilan peta 
 	var baseLayers = {
 		"Abu": grayscale,
