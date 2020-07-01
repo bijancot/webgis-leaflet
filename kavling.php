@@ -13,4 +13,6 @@ sizeof($res);
 foreach ($res as $key => $sult) {
     echo "L.marker([".$sult['Latitude'].",".$sult['Longitude']."]).bindPopup(part, customOptions).addTo(kavling);";
 }
+
+require 'layer/kavling.php';
 ?>
