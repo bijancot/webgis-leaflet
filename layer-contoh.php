@@ -78,7 +78,6 @@
 	// L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.').addTo(kavling);
 	
 	<?php 
-		echo "panji";
 		require 'conn/koneksi.php';
 
 		$jenis = "P002";
@@ -91,7 +90,7 @@
 
 		sizeof($res);
 		foreach ($res as $key => $sult) {
-			echo "L.marker([".$sult['Latitude'].",".$sult['Longitude']."]).bindPopup(part, customOptions).addTo(kavling);";
+			echo "L.marker([".$sult['Latitude'].",".$sult['Longitude']."]).bindPopup(part, customOptions).addTo(kavling);<br/>";
 		}
 	?>
 
