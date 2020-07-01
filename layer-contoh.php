@@ -79,7 +79,7 @@
 	
 	<?php 
 		echo "panji";
-		require '../conn/koneksi.php';
+		require 'conn/koneksi.php';
 
 		$jenis = "P002";
 		$db = $mysqli->prepare("SELECT * FROM properti a join jenisProperti b on a.JenisID=b.JenisID where a.JenisID = ?");
