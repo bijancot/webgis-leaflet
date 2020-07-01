@@ -22,7 +22,7 @@ foreach ($res as $key => $sult) {
 	
 	echo "var customOptions_kav_".$count." =
         {
-        'maxWidth': '500',
+        'maxWidth': '800',
         'className' : 'custom_kav_".$count,"'
         }\n";
     echo "L.marker([".$sult['Latitude'].",".$sult['Longitude']."]).bindPopup(part_kav_".$count,", customOptions_kav_".$count.").addTo(kavling);";
