@@ -7,7 +7,7 @@ L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.').addTo(kavling);";
 require('conn/koneksi.php');
 
 $jenis = "P002";
-$db = $mysqli->prepare("SELECT * FROM properti a join jenisProperti b on a.JenisID=b.JenisID where a.JenisID = '?'");
+$db = $mysqli->prepare("SELECT * FROM properti a join jenisProperti b on a.JenisID=b.JenisID where a.JenisID = ?");
 $db->bind_param("s",$jenis);
 
 
