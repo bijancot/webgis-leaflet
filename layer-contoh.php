@@ -54,8 +54,6 @@
 	
 	// map.setView(new L.LatLng(-7.9786395, 112.5617424), 8);
 	// variabel layergroup
-	var kavling= L.layerGroup();
-
 	/* Contoh custom value untuk popup leafletjs, ini juga terhubung dengan bulmacss (untuk reponsive saja) 
 	class columns & column tidak bisa dirubah karena bawaan, height bisa dicustom (lihat baris 26-31)
 	*/
