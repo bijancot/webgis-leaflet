@@ -78,6 +78,7 @@
 	// L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.').addTo(kavling);
 	
 	<?php 
+		echo "panji";
 		require './layer/kavling.php';
 	?>
 
