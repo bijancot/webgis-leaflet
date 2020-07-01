@@ -51,7 +51,7 @@
 	});
 
 	// variabel layergroup
-	// var kavling= L.layerGroup();
+	var kavling= L.layerGroup();
 
 	/* Contoh custom value untuk popup leafletjs, ini juga terhubung dengan bulmacss (untuk reponsive saja) 
 	class columns & column tidak bisa dirubah karena bawaan, height bisa dicustom (lihat baris 26-31)
@@ -71,13 +71,10 @@
         }
 
 	// menambahkan marker
-	// L.marker([-7.900509, 112.6069513]).bindPopup(part, customOptions).addTo(kavling),
-	// L.marker([-7.905609, 112.6122395]).bindPopup(part, customOptions).addTo(kavling),
-	// L.marker([39.73, -104.8]).bindPopup('This is Aurora, CO.').addTo(kavling),
-	// L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.').addTo(kavling);
-		// variabel layergroup
-		var kavling= L.layerGroup();
-	<?php include_once('layer/kavling.php')?>
+	L.marker([-7.900509, 112.6069513]).bindPopup(part, customOptions).addTo(kavling),
+	L.marker([-7.905609, 112.6122395]).bindPopup(part, customOptions).addTo(kavling),
+	L.marker([39.73, -104.8]).bindPopup('This is Aurora, CO.').addTo(kavling),
+	L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.').addTo(kavling);
 
 	var apart= L.layerGroup();
 
