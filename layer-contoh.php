@@ -1,8 +1,8 @@
 
 
-<?php 
+	<?php 
 		require 'kavling.php';
-?>
+	?>
 <html>
 <head>
 	
