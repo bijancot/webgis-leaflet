@@ -12,8 +12,8 @@ $db->bind_param("s",$jenis);
 
 $jenis = "P002";
 $db->execute();
-$res = $db->get_result();
-
+$cos = $db->get_result();
+$res = $result->fetch_all(MYSQLI_ASSOC);
 var_dump($res);
 foreach ($res as $key => $sult) {
     echo $sult['Longitude'];
