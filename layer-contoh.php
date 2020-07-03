@@ -119,7 +119,7 @@
 		"Apartement": apart,
 		"Villa" : villa,
 		"Rumah Susun" : rusun,
-		"Tanah Kavling" : tanahKavling
+		"Tanah Kavling" : tnhKavling,
 		"Perumahan Ellite" : rmhEllite
 	};
 
