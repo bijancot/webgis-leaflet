@@ -103,7 +103,7 @@
 		var map = L.map('map', {
 		center: [-7.9089297, 112.5992162],
 		zoom: 14.25,
-		layers: [streets, rmhBersubsidi, apart, villa, rusun, tnhKavling, ellite]
+		layers: [streets, rmhBersubsidi, apart, villa, rusun, tnhKavling, rmhEllite]
 	});
 	map.flyTo([-7.9089297, 112.5992162], 14.25);
 
