@@ -120,7 +120,7 @@
 		"Villa" : villa,
 		"Rumah Susun" : rusun,
 		"Tanah Kavling" : tanahKavling
-		"Perumahan Ellite" : ellite
+		"Perumahan Ellite" : rmhEllite
 	};
 
 	// memasukkan semua controller ke peta
