@@ -5,6 +5,11 @@ $username = "admin_gis";
 $password = "1sampaigis";
 $dbname = "admin_gis";
 
+// $servername = "localhost";
+// $username = "root";
+// $password = "";
+// $dbname = "propertiku";
+
 // Create connection
 $mysqli = new mysqli($servername, $username, $password, $dbname);
 

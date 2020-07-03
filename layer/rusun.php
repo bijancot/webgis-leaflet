@@ -36,7 +36,7 @@ foreach ($res as $key => $sult) {
         'minWidth': '800',
         'className' : 'custom_kav_".$count,"'
         }\n";
-    echo "L.marker([".$sult['Latitude'].",".$sult['Longitude']."]).bindPopup(part_kav_".$count,", customOptions_kav_".$count.").addTo(rusun);";
+    echo "L.marker([".$sult['Latitude'].",".$sult['Longitude']."], {icon: orangeIcon}).bindPopup(part_kav_".$count,", customOptions_kav_".$count.").addTo(rusun);";
 
     $count++;
 }
