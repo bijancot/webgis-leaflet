@@ -89,10 +89,6 @@
 			require 'layer/villa.php';
 	?>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 2bcc9c6ef3c912af295b521ff1f39a5828a2299e
 	var mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
 			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
 			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -123,7 +119,7 @@
 		"Apartement": apart,
 		"Villa" : villa,
 		"Rumah Susun" : rusun,
-		"Tanah Kavling" : tanahKavling
+		"Tanah Kavling" : tanahKavling,
 		"Perumahan Ellite" : ellite
 	};
 
