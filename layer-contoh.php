@@ -42,14 +42,6 @@
 <script>
 	/*contoh custom marker untuk leaflet sumber : https://github.com/pointhi/leaflet-color-markers 
 	untuk custom icon bisa pakai png lain tinggal ganti 'iconUrl' & shadowUrl */
-	var greenIcon = new L.Icon({
-	iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
-	shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-	iconSize: [25, 41],
-	iconAnchor: [12, 41],
-	popupAnchor: [1, -34],
-	shadowSize: [41, 41]
-	});
 
 	var yellowIcon = new L.Icon({
 	iconUrl: 'https://github.com/pointhi/leaflet-color-markers/blob/master/img/marker-icon-2x-yellow.png',
@@ -97,6 +89,7 @@
 			require 'layer/villa.php';
 	?>
 
+<<<<<<< HEAD
 	var apart= L.layerGroup();
 
 	
@@ -143,6 +136,8 @@
 	L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.').addTo(tanahKavling);
 
 
+=======
+>>>>>>> 9b6a4753db80da2c09f5d94d22c6d67d3c8ee46e
 	var mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
 			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
 			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
