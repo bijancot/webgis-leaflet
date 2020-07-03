@@ -1,5 +1,14 @@
 <?php
 
+echo "var goldIcon = new L.Icon({
+	iconUrl: 'https://github.com/pointhi/leaflet-color-markers/blob/master/img/marker-icon-2x-gold.png',
+	shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+	iconSize: [25, 41],
+	iconAnchor: [12, 41],
+	popupAnchor: [1, -34],
+	shadowSize: [41, 41]
+    });\n";
+
 echo "var villa = L.layerGroup();\n";
 
 $jenis = "P005";

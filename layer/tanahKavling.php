@@ -1,6 +1,15 @@
 <?php
 
-echo "var tnhKavling = L.layerGroup();\n";
+echo "var greyIcon = new L.Icon({
+	iconUrl: 'https://github.com/pointhi/leaflet-color-markers/blob/master/img/marker-icon-2x-grey.png',
+	shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+	iconSize: [25, 41],
+	iconAnchor: [12, 41],
+	popupAnchor: [1, -34],
+	shadowSize: [41, 41]
+    });\n";
+
+echo "var tanahKavling = L.layerGroup();\n";
 
 $jenis = "P003";
 $db = $mysqli->prepare("SELECT * FROM properti a join jenisProperti b on a.JenisID=b.JenisID where a.JenisID = ?");
@@ -27,7 +36,7 @@ foreach ($res as $key => $sult) {
         'minWidth': '800',
         'className' : 'custom_kav_".$count,"'
         }\n";
-    echo "L.marker([".$sult['Latitude'].",".$sult['Longitude']."]).bindPopup(part_kav_".$count,", customOptions_kav_".$count.").addTo(tnhKavling);";
+    echo "L.marker([".$sult['Latitude'].",".$sult['Longitude']."]).bindPopup(part_kav_".$count,", customOptions_kav_".$count.").addTo(tanahKavling);";
 
     $count++;
 }
