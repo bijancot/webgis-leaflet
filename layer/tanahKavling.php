@@ -9,7 +9,7 @@ echo "var greyIcon = new L.Icon({
 	shadowSize: [41, 41]
     });\n";
 
-echo "var tanahKavling = L.layerGroup();\n";
+echo "var tnhKavling = L.layerGroup();\n";
 
 $jenis = "P003";
 $db = $mysqli->prepare("SELECT * FROM properti a join jenisProperti b on a.JenisID=b.JenisID where a.JenisID = ?");
@@ -36,7 +36,7 @@ foreach ($res as $key => $sult) {
         'minWidth': '800',
         'className' : 'custom_kav_".$count,"'
         }\n";
-    echo "L.marker([".$sult['Latitude'].",".$sult['Longitude']."]).bindPopup(part_kav_".$count,", customOptions_kav_".$count.").addTo(tanahKavling);";
+    echo "L.marker([".$sult['Latitude'].",".$sult['Longitude']."]).bindPopup(part_kav_".$count,", customOptions_kav_".$count.").addTo(tnhKavling);";
 
     $count++;
 }
