@@ -51,6 +51,17 @@
 	shadowSize: [41, 41]
 	});
 
+	var yellowIcon = new L.Icon({
+	iconUrl: 'https://github.com/pointhi/leaflet-color-markers/blob/master/img/marker-icon-2x-yellow.png',
+	shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+	iconSize: [25, 41],
+	iconAnchor: [12, 41],
+	popupAnchor: [1, -34],
+	shadowSize: [41, 41]
+	});
+
+
+
 	
 	// map.setView(new L.LatLng(-7.9786395, 112.5617424), 8);
 	// variabel layergroup
@@ -79,6 +90,11 @@
 	
 	<?php 
 			require 'layer/rmhBersubsidi.php';
+			require 'layer/apart.php';
+			require 'layer/ellite.php';
+			require 'layer/rusun.php';
+			require 'layer/tanahKavling.php';
+			require 'layer/villa.php';
 	?>
 
 	var apart= L.layerGroup();
@@ -96,6 +112,37 @@
 	L.marker([39.73, -104.8]).bindPopup('This is Aurora, CO.').addTo(perum),
 	L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.').addTo(perum);
 
+	perum = 
+
+	var villa= L.layerGroup();
+
+	L.marker([39.61, -105.02]).bindPopup('This is Littleton, CO.').addTo(villa),
+	L.marker([39.74, -104.99]).bindPopup('This is Denver, CO.').addTo(villa),
+	L.marker([39.73, -104.8]).bindPopup('This is Aurora, CO.').addTo(villa),
+	L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.').addTo(villa);
+
+	var rusun= L.layerGroup();
+
+	L.marker([39.61, -105.02]).bindPopup('This is Littleton, CO.').addTo(rusun),
+	L.marker([39.74, -104.99]).bindPopup('This is Denver, CO.').addTo(rusun),
+	L.marker([39.73, -104.8]).bindPopup('This is Aurora, CO.').addTo(rusun),
+	L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.').addTo(rusun);
+
+	var ellite= L.layerGroup();
+
+	L.marker([39.61, -105.02]).bindPopup('This is Littleton, CO.').addTo(ellite),
+	L.marker([39.74, -104.99]).bindPopup('This is Denver, CO.').addTo(ellite),
+	L.marker([39.73, -104.8]).bindPopup('This is Aurora, CO.').addTo(ellite),
+	L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.').addTo(ellite);
+
+	var tanahKavling= L.layerGroup();
+
+	L.marker([39.61, -105.02]).bindPopup('This is Littleton, CO.').addTo(tanahKavling),
+	L.marker([39.74, -104.99]).bindPopup('This is Denver, CO.').addTo(tanahKavling),
+	L.marker([39.73, -104.8]).bindPopup('This is Aurora, CO.').addTo(tanahKavling),
+	L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.').addTo(tanahKavling);
+
+
 	var mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
 			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
 			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -110,7 +157,7 @@
 		var map = L.map('map', {
 		center: [-7.9089297, 112.5992162],
 		zoom: 14.25,
-		layers: [streets, rmhBersubsidi]
+		layers: [streets, rmhBersubsidi, apart, villa, rusun, tanahKavling, ellite]
 	});
 	map.flyTo([-7.9089297, 112.5992162], 14.25);
 
@@ -123,7 +170,11 @@
 	// variabel penampung overlay (layer custom) untuk controller di tampilan peta 
 	var overlays = {
 		"Rumah Bersubsidi": rmhBersubsidi,
-		"Apartement": apart
+		"Apartement": apart,
+		"Villa" : villa,
+		"Rumah Susun" : rusun,
+		"Tanah Kavling" : tanahKavling
+		"Perumahan Ellite" : ellite
 	};
 
 	// memasukkan semua controller ke peta
