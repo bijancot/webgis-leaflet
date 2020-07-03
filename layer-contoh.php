@@ -119,8 +119,13 @@
 		"Apartement": apart,
 		"Villa" : villa,
 		"Rumah Susun" : rusun,
+<<<<<<< HEAD
 		"Tanah Kavling" : tanahKavling,
 		"Perumahan Ellite" : ellite
+=======
+		"Tanah Kavling" : tanahKavling
+		"Perumahan Ellite" : rmhEllite
+>>>>>>> 7979494a941465c60bdcd4d1dfad664167610302
 	};
 
 	// memasukkan semua controller ke peta
