@@ -89,55 +89,6 @@
 			require 'layer/villa.php';
 	?>
 
-<<<<<<< HEAD
-	var apart= L.layerGroup();
-
-	
-	L.marker([39.61, -105.02], {icon: greenIcon}).bindPopup('This is Littleton, CO.').addTo(apart),
-	L.marker([39.74, -104.99], {icon: greenIcon}).bindPopup('This is Denver, CO.').addTo(apart),
-	L.marker([39.73, -104.8], {icon: greenIcon}).bindPopup('This is Aurora, CO.').addTo(apart),
-	L.marker([39.77, -105.23], {icon: greenIcon}).bindPopup('This is Golden, CO.').addTo(apart);
-
-	var perum= L.layerGroup();
-
-	L.marker([39.61, -105.02]).bindPopup('This is Littleton, CO.').addTo(perum),
-	L.marker([39.74, -104.99]).bindPopup('This is Denver, CO.').addTo(perum),
-	L.marker([39.73, -104.8]).bindPopup('This is Aurora, CO.').addTo(perum),
-	L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.').addTo(perum);
-
-	perum = 
-
-	var villa= L.layerGroup();
-
-	L.marker([39.61, -105.02]).bindPopup('This is Littleton, CO.').addTo(villa),
-	L.marker([39.74, -104.99]).bindPopup('This is Denver, CO.').addTo(villa),
-	L.marker([39.73, -104.8]).bindPopup('This is Aurora, CO.').addTo(villa),
-	L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.').addTo(villa);
-
-	var rusun= L.layerGroup();
-
-	L.marker([39.61, -105.02]).bindPopup('This is Littleton, CO.').addTo(rusun),
-	L.marker([39.74, -104.99]).bindPopup('This is Denver, CO.').addTo(rusun),
-	L.marker([39.73, -104.8]).bindPopup('This is Aurora, CO.').addTo(rusun),
-	L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.').addTo(rusun);
-
-	var ellite= L.layerGroup();
-
-	L.marker([39.61, -105.02]).bindPopup('This is Littleton, CO.').addTo(ellite),
-	L.marker([39.74, -104.99]).bindPopup('This is Denver, CO.').addTo(ellite),
-	L.marker([39.73, -104.8]).bindPopup('This is Aurora, CO.').addTo(ellite),
-	L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.').addTo(ellite);
-
-	var tanahKavling= L.layerGroup();
-
-	L.marker([39.61, -105.02]).bindPopup('This is Littleton, CO.').addTo(tanahKavling),
-	L.marker([39.74, -104.99]).bindPopup('This is Denver, CO.').addTo(tanahKavling),
-	L.marker([39.73, -104.8]).bindPopup('This is Aurora, CO.').addTo(tanahKavling),
-	L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.').addTo(tanahKavling);
-
-
-=======
->>>>>>> 9b6a4753db80da2c09f5d94d22c6d67d3c8ee46e
 	var mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
 			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
 			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
