@@ -89,10 +89,6 @@
 			require 'layer/villa.php';
 	?>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 2bcc9c6ef3c912af295b521ff1f39a5828a2299e
 	var mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
 			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
 			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -107,7 +103,7 @@
 		var map = L.map('map', {
 		center: [-7.9089297, 112.5992162],
 		zoom: 14.25,
-		layers: [streets, rmhBersubsidi, apart, villa, rusun, tanahKavling, ellite]
+		layers: [streets, rmhBersubsidi, apart, villa, rusun, tnhKavling, ellite]
 	});
 	map.flyTo([-7.9089297, 112.5992162], 14.25);
 
