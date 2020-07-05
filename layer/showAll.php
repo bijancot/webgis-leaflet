@@ -29,14 +29,14 @@ foreach ($res as $key => $sult) {
 	'</div>';\n";
 
 	
-	echo "var customOptions_kav_".$count." =
+	echo "var customOptions_all_".$count." =
         {
         'maxWidth': '800',
         'maxheight': '800',
         'minWidth': '800',
-        'className' : 'custom_kav_".$count,"'
+        'className' : 'custom_all_".$count,"'
         }\n";
-    echo "L.marker([".$sult['Latitude'].",".$sult['Longitude']."], {icon: blackIcon}).bindPopup(part_kav_".$count,", customOptions_kav_".$count.").addTo(apart);";
+    echo "L.marker([".$sult['Latitude'].",".$sult['Longitude']."], {icon: blackIcon}).bindPopup(part_all_".$count,", customOptions_all_".$count.").addTo(showAll);";
 
     $count++;
 }
