@@ -15,9 +15,6 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item" gref="#">
-        Home
-      </a>
       <a class="navbar-item">
         Dokumentasi
       </a>
