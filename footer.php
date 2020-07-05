@@ -8,12 +8,15 @@
     <p>
       <strong>Icon</strong> by <a href="https://jgthms.com">Flaticon</a>. 
       The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">Apache 2.0</a>.
-      <a class="button is-dark" href="https://github.com/bijancot/webgis-leaflet">
+      </a>
+    </p>
+    <p>
+        fork this one !
+    </p>
+    <a class="button is-dark" href="https://github.com/bijancot/webgis-leaflet">
                 <span class="icon">
                     <i class="fab fa-github"></i>
                 </span>
                 <span>Github</span>
-      </a>
-    </p>
   </div>
 </footer>
