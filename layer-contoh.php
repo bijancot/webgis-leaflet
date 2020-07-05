@@ -50,6 +50,8 @@
 <?php require 'header.php'?>
 <div id='map'></div>
 
+<?php require 'footer.php'?>
+
 <script>
 	/*contoh custom marker untuk leaflet sumber : https://github.com/pointhi/leaflet-color-markers 
 	untuk custom icon bisa pakai png lain tinggal ganti 'iconUrl' & shadowUrl */
