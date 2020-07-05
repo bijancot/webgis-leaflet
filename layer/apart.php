@@ -29,7 +29,7 @@ foreach ($res as $key => $sult) {
     '<p>Jarak ke pusat kota</p>' +
     '<br/><br/>'+
     'Info Lebih lanjut :'+
-    '<a href=\"detail.php?jenis=".$sult['JenisID']."&properti=".$sult['PropertiID']."\">Detail properti</a>\n\"'";
+    '<a href=\"detail.php?jenis=".$sult['JenisID']."&properti=".$sult['PropertiID']."\">Detail properti</a>\n\'";
 
 	
 	echo "var customOptions_kav_".$count." =
