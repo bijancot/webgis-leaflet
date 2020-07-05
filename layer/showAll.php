@@ -35,7 +35,7 @@ foreach ($res as $key => $sult) {
         'maxheight': '800',
         'className' : 'custom_all_".$count,"'
         }\n";
-    echo "L.marker([".$sult['Latitude'].",".$sult['Longitude']."], {icon: greenIcon).bindPopup(part_all_".$count,", customOptions_all_".$count.").addTo(showAll);";
+    echo "L.marker([".$sult['Latitude'].",".$sult['Longitude']."], {icon: greenIcon}).bindPopup(part_all_".$count,", customOptions_all_".$count.").addTo(showAll);";
 
     $count++;
 }
