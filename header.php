@@ -1,7 +1,7 @@
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="#">
-	<h1 class="title is-right">
+	<h1 class="title" style="color:white;">
         Webgis-Leaflet
     </h1>
     </a>
@@ -36,9 +36,9 @@
       <div class="navbar-item">
         <div class="buttons">
           <a class="button is-primary">
-            <strong>Hello user</strong>
+            <strong>Hello <?= $_SESSION['username']?></strong>
           </a>
-          <a class="button is-light">
+          <a class="button is-light" href="logout.php">
             Log Out
           </a>
         </div>
