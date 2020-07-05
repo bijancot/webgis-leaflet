@@ -87,6 +87,7 @@
 			require 'layer/rusun.php';
 			require 'layer/tanahKavling.php';
 			require 'layer/villa.php';
+			require 'layer/showAll.php';
 	?>
 
 	var mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
@@ -107,7 +108,7 @@
 		var map = L.map('map', {
 		center: [-7.9089297, 112.5992162],
 		zoom: 14.25,
-		layers: [streets, rmhBersubsidi, apart, villa, rusun, tnhKavling, rmhEllite]
+		layers: [streets, showAll]
 	});
 	map.flyTo([-7.9089297, 112.5992162], 14.25);
 
@@ -128,7 +129,8 @@
 		"Villa" : villa,
 		"Rumah Susun" : rusun,
 		"Tanah Kavling" : tnhKavling,
-		"Perumahan Ellite" : rmhEllite
+		"Perumahan Ellite" : rmhEllite,
+		"Semua Properti" : showAll
 	};
 
 	// memasukkan semua controller ke peta
