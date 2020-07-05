@@ -9,7 +9,7 @@ echo "var blackIcon = new L.Icon({
 	shadowSize: [41, 41]
     });\n";
 
-echo "var apart = L.layerGroup();\n";
+echo "var showAll = L.layerGroup();\n";
 
 $jenis = "P";
 $db = $mysqli->prepare("SELECT * FROM properti where JenisID != ?");
