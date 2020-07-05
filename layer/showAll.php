@@ -12,7 +12,7 @@ echo "var greenIcon = new L.Icon({
 echo "var showAll = L.layerGroup();\n";
 
 $jenis = "P";
-$db = $mysqli->prepare("SELECT * FROM properti a join jenisProperti b on a.JenisID=b.JenisID where a.JenisID = ?");
+$db = $mysqli->prepare("SELECT * FROM properti a join jenisProperti b on a.JenisID=b.JenisID where a.JenisID != ?");
 $db->bind_param("s",$jenis);
 $db->execute();
 

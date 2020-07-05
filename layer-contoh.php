@@ -11,6 +11,7 @@
 	
 	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
@@ -39,7 +40,7 @@
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="#">
-	<h1 class="title">
+	<h1 class="title is-right">
         Webgis-Leaflet
     </h1>
     </a>
@@ -61,13 +62,13 @@
       </a>
 	  </div>
 	  <span class="navbar-item">
-                    <a class="button is-primary is-inverted" href="https://github.com/bijancot/webgis-leaflet">
-                      <span class="icon">
-                        <i class="fab fa-github"></i>
-                      </span>
-                      <span>Github</span>
-                    </a>
-                  </span>
+            <a class="button is-primary is-inverted" href="https://github.com/bijancot/webgis-leaflet">
+                <span class="icon">
+                    <i class="fab fa-github"></i>
+                </span>
+                <span>Github</span>
+            </a>
+       </span>
     </div>
 
     <!-- <div class="navbar-end">
