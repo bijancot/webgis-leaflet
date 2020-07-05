@@ -33,7 +33,6 @@ foreach ($res as $key => $sult) {
         {
         'maxWidth': '800',
         'maxheight': '800',
-        'minWidth': '800',
         'className' : 'custom_kav_".$count,"'
         }\n";
     echo "L.marker([".$sult['Latitude'].",".$sult['Longitude']."], {icon: greyIcon}).bindPopup(part_kav_".$count,", customOptions_kav_".$count.").addTo(tnhKavling);";
