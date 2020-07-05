@@ -18,5 +18,6 @@
                     <i class="fab fa-github"></i>
                 </span>
                 <span>Github</span>
+    </a>
   </div>
 </footer>
