@@ -1,5 +1,15 @@
 <?php 
 		require 'conn/koneksi.php';
+		$base_url = "http://kristomoyo.com/leaflet";
+		if(isset($_POST['user'])){
+			session_start();
+			$_SESSION["username"] = $_POST['user'];
+		}else{
+			echo ("<script LANGUAGE='JavaScript'>
+    window.alert('Oops kasih tau nama kamu dong, ;)');
+    window.location.href='".$base_url."';
+    </script>");
+		}
 	?>
 <html>
 <head>

@@ -22,27 +22,27 @@
         Dokumentasi
       </a>
 	  </div>
-	  <span class="navbar-item">
+	  <!-- <span class="navbar-item">
             <a class="button is-primary is-inverted" href="https://github.com/bijancot/webgis-leaflet">
                 <span class="icon">
                     <i class="fab fa-github"></i>
                 </span>
                 <span>Github</span>
             </a>
-       </span>
+       </span> -->
     </div>
 
-    <!-- <div class="navbar-end">
+    <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
           <a class="button is-primary">
-            <strong>Sign up</strong>
+            <strong>Hello user</strong>
           </a>
           <a class="button is-light">
-            Log in
+            Log Out
           </a>
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
 </nav>
