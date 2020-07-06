@@ -1,4 +1,4 @@
-<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="#">
 	<h1 class="title" style="color:white;">
@@ -32,7 +32,7 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a class="button is-primary">
+          <a class="button is-dark is-inverted">
             <strong>Hello <?= $_SESSION['username']?></strong>
           </a>
           <a class="button is-light" href="logout.php">
