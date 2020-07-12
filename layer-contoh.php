@@ -1,6 +1,6 @@
 <?php 
 		require 'conn/koneksi.php';
-		require 'rupiah.php';
+		require 'layer/rupiah.php';
 		$base_url = "http://kristomoyo.com/leaflet";
 		if(isset($_POST['user'])){
 			session_start();
