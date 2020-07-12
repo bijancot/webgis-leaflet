@@ -7,7 +7,7 @@ $dbname = "admin_gis";
 
 // $servername = "localhost";
 // $username = "root";
-// $password = "";
+// $password = "root";
 // $dbname = "propertiku";
 
 // Create connection
