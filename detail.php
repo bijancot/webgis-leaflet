@@ -4,7 +4,15 @@ require 'conn/koneksi.php';
 require 'layer/rupiah.php';
 $jenisProperti = $_GET['jenis'];
 $idProperti = $_GET['properti'];
-
+if(isset($_POST['user'])){
+    session_start();
+    $_SESSION["username"] = $_POST['user'];
+}else{
+    echo ("<script LANGUAGE='JavaScript'>
+window.alert('Oops kasih tau nama kamu dong, ;)');
+window.location.href='".$base_url."';
+</script>");
+}
 
 
 $jenis = $jenisProperti;
@@ -36,6 +44,7 @@ foreach ($res as $key => $value) {
 	
 	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
