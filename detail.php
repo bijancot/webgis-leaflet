@@ -105,7 +105,7 @@ foreach ($res as $key => $value) {
 				  <br/>
 				  <div class="content">
                       <div class="columns">
-                          <diV class="column">
+                          <div class="column">
                           <table class="table">
                           <thead>
                             <tr>
@@ -155,7 +155,30 @@ foreach ($res as $key => $value) {
                       </table>
                           </div>
                           <div class="column">
-                            <div id="mapid"></div>
+                          </div>
+                      </div>
+				  </div>
+                </div>
+
+				<footer class="card-footer">
+				  <p class="card-footer-item">
+					<span>
+					  <a class="button" href="https://api.whatsapp.com/send?phone=6282334059230&text=Halo%20saya%20butuh%20informasi%20lebih%20lanjut">Chat Whatsapp &nbsp;&nbsp;<i class="fab fa-whatsapp"></i></a>
+					</span>
+				  </p>
+				  <p class="card-footer-item">
+					<span>
+					  <a class="button" href="tel:(+62) 923-3405-9230">Telpon Kami Sekarang &nbsp;<i class="fab fa-phone"></i></a>
+					</span>
+				  </p>
+				</footer>
+              </div>
+                
+		</section>
+    </div>
+    <?php break;}?>
+<?php require 'footer.php'?>
+<div id="mapid"></div>
                             <script>
 
 var mymap = L.map('mapid').setView([51.505, -0.09], 13);
@@ -198,29 +221,5 @@ function onMapClick(e) {
 mymap.on('click', onMapClick);
 
 </script>
-                          </div>
-                      </div>
-				  </div>
-                </div>
-                <div id="mapid"></div>
-
-				<footer class="card-footer">
-				  <p class="card-footer-item">
-					<span>
-					  <a class="button" href="https://api.whatsapp.com/send?phone=6282334059230&text=Halo%20saya%20butuh%20informasi%20lebih%20lanjut">Chat Whatsapp &nbsp;&nbsp;<i class="fab fa-whatsapp"></i></a>
-					</span>
-				  </p>
-				  <p class="card-footer-item">
-					<span>
-					  <a class="button" href="tel:(+62) 923-3405-9230">Telpon Kami Sekarang &nbsp;<i class="fab fa-phone"></i></a>
-					</span>
-				  </p>
-				</footer>
-              </div>
-                
-		</section>
-    </div>
-    <?php break;}?>
-<?php require 'footer.php'?>
 </body>
 </html>
