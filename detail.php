@@ -117,7 +117,13 @@ foreach ($res as $key => $value) {
                               </tr>
                               <tr>
                                 <td>Tahun Bangun</td>
-                                <td><?=$sult['Tahun_bangun'];?></td>
+                                <td><?php
+                                if($sult['Tahun_bangun']== null){
+                                    echo "-";
+                                }else{
+                                    echo $sult['Tahun_bangun'];
+                                }
+                                ?></td>
                               </tr>
                               <tr>
                                 <td>Jumlah cicilan</td>
@@ -150,7 +156,7 @@ foreach ($res as $key => $value) {
 				<footer class="card-footer">
 				  <p class="card-footer-item">
 					<span>
-					  <a class="button" href="https://api.whatsapp.com/send?phone=6282334059230&text=Halo%20saya%20butuh%20informasi%20lebih%20lanjut">Chat Whatsapp &nbsp;&nbsp;&nbsp;<i class="fab fa-whatsapp"></i></a>
+					  <a class="button" href="https://api.whatsapp.com/send?phone=6282334059230&text=Halo%20saya%20butuh%20informasi%20lebih%20lanjut">Chat Whatsapp &nbsp;&nbsp;<i class="fab fa-whatsapp"></i></a>
 					</span>
 				  </p>
 				  <p class="card-footer-item">
