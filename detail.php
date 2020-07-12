@@ -176,10 +176,9 @@ foreach ($res as $key => $value) {
               </div>
                 
 		</section>
-	</div>
+    </div>
+    <?php break;}?>
 <?php require 'footer.php'?>
-</body>
-
 <script>
 
 	var mymap = L.map('mapid').setView([51.505, -0.09], 13);
@@ -222,5 +221,5 @@ foreach ($res as $key => $value) {
 	mymap.on('click', onMapClick);
 
 </script>
+</body>
 </html>
-<?php break;}?>
