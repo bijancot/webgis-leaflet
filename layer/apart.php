@@ -21,22 +21,21 @@ $res = $cos->fetch_all(MYSQLI_ASSOC);
 
 $count = 0;
 foreach ($res as $key => $sult) {
-    echo "var part_kav_".$count." = '<h6 class=\"".$sult['NamaJenis']."\">Jenis Properti : ".$sult['NamaJenis']."</h6>'+
+    echo "var part_apart_".$count." = '<h6 class=\"".$sult['NamaJenis']."\">Jenis Properti : ".$sult['NamaJenis']."</h6>'+
     '<h3 class=\"title\">".$sult['NamaProperti']."</h3>'+
-    '<br/>' +
     '<p>Alamat Properti : ".$sult['Alamat_properti']."</p>' +
-    '<p>Harga : ".$sult['Harga']."' +
+    '<p>Harga : ".$sult['Harga']."</p>' +
     'Info Lebih lanjut :'+
     '<a href=\"detail.php?jenis=".$sult['JenisID']."&properti=".$sult['PropertiID']."\">Detail properti</a>'\n";
 
 	
-	echo "var customOptions_kav_".$count." =
+	echo "var customOptions_apart_".$count." =
         {
-        'maxWidth': '400',
-        'maxheight': '400',
-        'className' : 'custom_kav_".$count,"'
+        'maxWidth': '350',
+        'maxheight': '350',
+        'className' : 'custom_apart_".$count,"'
         }\n";
-    echo "L.marker([".$sult['Latitude'].",".$sult['Longitude']."], {icon: blackIcon}).bindPopup(part_kav_".$count,", customOptions_kav_".$count.").addTo(apart);";
+    echo "L.marker([".$sult['Latitude'].",".$sult['Longitude']."], {icon: blackIcon}).bindPopup(part_apart_".$count,", customOptions_apart_".$count.").addTo(apart);";
 
     $count++;
 }
