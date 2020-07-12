@@ -21,13 +21,11 @@ $res = $cos->fetch_all(MYSQLI_ASSOC);
 
 $count = 0;
 foreach ($res as $key => $sult) {
-    echo "var part_kav_".$count." = '<h6 class=\"".$sult['NamaJenis']."\">Jenis Properti :</h6>".$sult['NamaJenis']."'+
+    echo "var part_kav_".$count." = '<h6 class=\"".$sult['NamaJenis']."\">Jenis Properti : ".$sult['NamaJenis']."</h6>'+
     '<h3 class=\"title\">".$sult['NamaProperti']."</h3>'+
     '<br/>' +
-    '<p>alamat Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis similique explicabo vero, commodi, sapiente quas praesentium quia eligendi sint aperiam maiores quisquam modi quo itaque ab amet aspernatur saepe! A.</p>' +
-    '<p>tahun bangun</p>' +
-    '<p>Jarak ke pusat kota</p>' +
-    '<br/><br/>'+
+    '<p>Alamat Properti : ".$sult['Alamat_properti']."</p>' +
+    '<p>Harga : ".$sult['Harga']."' +
     'Info Lebih lanjut :'+
     '<a href=\"detail.php?jenis=".$sult['JenisID']."&properti=".$sult['PropertiID']."\">Detail properti</a>'\n";
 
