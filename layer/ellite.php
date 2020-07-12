@@ -22,7 +22,7 @@ $res = $cos->fetch_all(MYSQLI_ASSOC);
 $count = 0;
 foreach ($res as $key => $sult) {
 	echo "var part_kav_".$count." = '<h6 class=\"".$sult['NamaJenis']."\">Jenis Properti : ".$sult['NamaJenis']."</h6>'+
-    '<h3 class=\"title\">".$sult['NamaProperti']."</h3>'+
+    '<h4 class=\"title\">".$sult['NamaProperti']."</h4>'+
     '<p>Alamat Properti : ".$sult['Alamat_properti']."</p>' +
     '<p>Harga : ".rupiah($sult['Harga'])."</p>' +
     'Info Lebih lanjut :'+

@@ -25,25 +25,77 @@
 			width: 100%;
 			height: 100vh;
 		}
-		.column, .columns{
-			min-width: 100px;
-			min-height: 70px;
-			max-width: 250px;
-			max-height: 120px;
-		}
 	</style>
 
 </head>
 <body>
-    <h6>Tipe</h6>
-    <h3>Nama Perumahan</h3>
-    <br/>
-    <p>alamat Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis similique explicabo vero, commodi, sapiente quas praesentium quia eligendi sint aperiam maiores quisquam modi quo itaque ab amet aspernatur saepe! A.</p>
-    <p>tahun bangun</p>
-    <p>Jarak ke pusat kota</p>
-    <br/>
-    <br/>
-    Info Lebih lanjut :
-    <a href="#?jenis=&properti=">Detail properti</a>
+	<div class="container">
+		<section class="section">
+			<div class="card">
+				<div class="card-content">
+					<h6>Jenis Properti</h6>
+				  
+					<div class="columns">
+						<div class="column">
+							<p class="title">
+								Nama Properti
+							</p>
+							<p class="subtitle">
+								Alamat Properti
+							</p>
+						</div>
+						<div class="column ">
+							<p class="title has-text-right">
+								harga Properti
+							</p>
+						</div>
+					</div>
+				 
+				  <div class="tile is-ancestor">
+					<div class="tile is-4 is-vertical is-parent">
+					  <div class="tile is-child box">
+						<p class="title">One</p>
+					  </div>
+					  <div class="tile is-child box">
+						<p class="title">Two</p>
+					  </div>
+					</div>
+					<div class="tile is-parent">
+					  <div class="tile is-child box">
+						<p class="title">Three</p>
+					  </div>
+					</div>
+				  </div>
+				  <br/>
+				  <div class="content">
+					  Alamat Properti<br/>
+
+					  Tahun bangun<br/>
+
+					  Jumlah cicil<br/>
+
+					  Luas bangunan<br/>
+
+					  harga<br/>
+
+
+				  </div>
+				</div>
+				<footer class="card-footer">
+				  <p class="card-footer-item">
+					<span>
+					  View on <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
+					</span>
+				  </p>
+				  <p class="card-footer-item">
+					<span>
+					  Share on <a href="#">Facebook</a>
+					</span>
+				  </p>
+				</footer>
+			  </div>
+		</section>
+	</div>
+    
 </body>
 </html>
