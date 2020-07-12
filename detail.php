@@ -7,7 +7,6 @@ $idProperti = $_GET['properti'];
 if($_SESSION["username"]!= null){
     //do nothing
 }else{
-    $base_url = "http://kristomoyo.com/leaflet";
     echo ("<script LANGUAGE='JavaScript'>
 window.alert('Oops kasih tau nama kamu dong, ;)');
 window.location.href='".$base_url."';
@@ -57,7 +56,7 @@ foreach ($res as $key => $value) {
 		}
 		#map {
 			width: 100%;
-			height: 100vh;
+			height: 400px;
 		}
 	</style>
 
@@ -105,7 +104,7 @@ foreach ($res as $key => $value) {
 				  <br/>
 				  <div class="content">
                       <div class="columns">
-                          <div class="column">
+                          <diV class="column">
                           <table class="table">
                           <thead>
                             <tr>
@@ -154,12 +153,12 @@ foreach ($res as $key => $value) {
                           </tfoot>
                       </table>
                           </div>
-                          <div class="column">
+                          <diV class="column">
+                            <div id="map"></div>
                           </div>
                       </div>
 				  </div>
-                </div>
-
+				</div>
 				<footer class="card-footer">
 				  <p class="card-footer-item">
 					<span>
@@ -175,13 +174,11 @@ foreach ($res as $key => $value) {
               </div>
                 
 		</section>
-    </div>
-    <?php break;}?>
+	</div>
 <?php require 'footer.php'?>
-<div id="mapid" style="width: 600px; height: 400px;"></div>
 <script>
 
-	var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+	var mymap = L.map('map').setView([<?= $sult['Latitude']?>, <?= $sult['Longitude']?>], 13);
 
 	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 		maxZoom: 18,
@@ -193,35 +190,9 @@ foreach ($res as $key => $value) {
 		zoomOffset: -1
 	}).addTo(mymap);
 
-	L.marker([51.5, -0.09]).addTo(mymap)
-		.bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
-
-	L.circle([51.508, -0.11], 500, {
-		color: 'red',
-		fillColor: '#f03',
-		fillOpacity: 0.5
-	}).addTo(mymap).bindPopup("I am a circle.");
-
-	L.polygon([
-		[51.509, -0.08],
-		[51.503, -0.06],
-		[51.51, -0.047]
-	]).addTo(mymap).bindPopup("I am a polygon.");
-
-
-	var popup = L.popup();
-
-	function onMapClick(e) {
-		popup
-			.setLatLng(e.latlng)
-			.setContent("You clicked the map at " + e.latlng.toString())
-			.openOn(mymap);
-	}
-
-	mymap.on('click', onMapClick);
+	L.marker([<?= $sult['Latitude']?>, <?= $sult['Longitude']?>]).addTo(mymap).bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
 
 </script>
-
-</script>
+<?php break;}?>
 </body>
 </html>
