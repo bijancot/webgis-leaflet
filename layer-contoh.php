@@ -1,9 +1,9 @@
 <?php 
+session_start();
 		require 'conn/koneksi.php';
 		require 'layer/rupiah.php';
 		$base_url = "http://kristomoyo.com/leaflet";
 		if(isset($_POST['user'])){
-			session_start();
 			$_SESSION["username"] = $_POST['user'];
 		}else if($_SESSION["username"]!= null){
 			//do nothing
