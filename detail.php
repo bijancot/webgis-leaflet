@@ -161,7 +161,7 @@ foreach ($res as $key => $value) {
 				  </p>
 				  <p class="card-footer-item">
 					<span>
-					  Share on <a href="#">Facebook</a>
+					  <a class="button" href="tel:(+62) 923-3405-9230">Telpon Kami Sekarang &nbsp;<i class="fab fa-phone"></i></a>
 					</span>
 				  </p>
 				</footer>
