@@ -190,8 +190,7 @@ foreach ($res as $key => $value) {
 		zoomOffset: -1
 	}).addTo(mymap);
 
-	L.marker([<?= $sult['Latitude']?>, <?= $sult['Longitude']?>]).addTo(mymap)
-		.bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
+	L.marker([<?= $sult['Latitude']?>, <?= $sult['Longitude']?>]).addTo(mymap).bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
 
 </script>
 <?php break;}?>
