@@ -161,25 +161,7 @@ foreach ($res as $key => $value) {
 				  </div>
                 </div>
                 <div id="mapid"></div>
-				<footer class="card-footer">
-				  <p class="card-footer-item">
-					<span>
-					  <a class="button" href="https://api.whatsapp.com/send?phone=6282334059230&text=Halo%20saya%20butuh%20informasi%20lebih%20lanjut">Chat Whatsapp &nbsp;&nbsp;<i class="fab fa-whatsapp"></i></a>
-					</span>
-				  </p>
-				  <p class="card-footer-item">
-					<span>
-					  <a class="button" href="tel:(+62) 923-3405-9230">Telpon Kami Sekarang &nbsp;<i class="fab fa-phone"></i></a>
-					</span>
-				  </p>
-				</footer>
-              </div>
-                
-		</section>
-    </div>
-    <?php break;}?>
-<?php require 'footer.php'?>
-<script>
+                <script>
 
 	var mymap = L.map('mapid').setView([51.505, -0.09], 13);
 
@@ -221,5 +203,24 @@ foreach ($res as $key => $value) {
 	mymap.on('click', onMapClick);
 
 </script>
+
+				<footer class="card-footer">
+				  <p class="card-footer-item">
+					<span>
+					  <a class="button" href="https://api.whatsapp.com/send?phone=6282334059230&text=Halo%20saya%20butuh%20informasi%20lebih%20lanjut">Chat Whatsapp &nbsp;&nbsp;<i class="fab fa-whatsapp"></i></a>
+					</span>
+				  </p>
+				  <p class="card-footer-item">
+					<span>
+					  <a class="button" href="tel:(+62) 923-3405-9230">Telpon Kami Sekarang &nbsp;<i class="fab fa-phone"></i></a>
+					</span>
+				  </p>
+				</footer>
+              </div>
+                
+		</section>
+    </div>
+    <?php break;}?>
+<?php require 'footer.php'?>
 </body>
 </html>
