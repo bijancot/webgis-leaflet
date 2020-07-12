@@ -5,6 +5,8 @@
 		if(isset($_POST['user'])){
 			session_start();
 			$_SESSION["username"] = $_POST['user'];
+		}else if($_SESSION["username"]!= null){
+			//do nothing
 		}else{
 			echo ("<script LANGUAGE='JavaScript'>
     window.alert('Oops kasih tau nama kamu dong, ;)');
