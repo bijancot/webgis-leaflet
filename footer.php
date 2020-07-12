@@ -1,5 +1,5 @@
 <footer class="footer has-background-dark">
-  <div class="content has-text-centered">
+  <div class="content has-text-centered has-text-primary-light">
     <p>
       <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
       <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
@@ -13,7 +13,7 @@
     <p>
         fork this one !
     </p>
-    <a class="button is-dark" href="https://github.com/bijancot/webgis-leaflet">
+    <a class="button is-light" href="https://github.com/bijancot/webgis-leaflet">
                 <span class="icon">
                     <i class="fab fa-github"></i>
                 </span>
