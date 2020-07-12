@@ -80,15 +80,15 @@ foreach ($res as $key => $value) {
 				  <div class="tile is-ancestor">
 					<div class="tile is-4 is-vertical is-parent">
 					  <div class="tile is-child box">
-						<img src="<?=$pho[0]?>" class="image" alt="foto properti #1">
+						<img src="http://kristomoyo.com/leaflet<?=$pho[0]?>" class="image" alt="foto properti #1">
 					  </div>
 					  <div class="tile is-child box">
-                        <img src="<?=$pho[1]?>" class="image" alt="foto properti #2">
+                        <img src="http://kristomoyo.com/leaflet<?=$pho[1]?>" class="image" alt="foto properti #2">
 					  </div>
 					</div>
 					<div class="tile is-parent">
 					  <div class="tile is-child box">
-                        <img src="<?=$pho[2]?>" class="image" alt="foto properti #3">
+                        <img src="http://kristomoyo.com/leaflet<?=$pho[2]?>" class="image" alt="foto properti #3">
 					  </div>
 					</div>
 				  </div>
