@@ -158,7 +158,8 @@ foreach ($res as $key => $value) {
                           </div>
                       </div>
 				  </div>
-				</div>
+                </div>
+                <div id="mapid"></div>
 				<footer class="card-footer">
 				  <p class="card-footer-item">
 					<span>
