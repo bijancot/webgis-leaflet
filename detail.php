@@ -153,7 +153,7 @@ foreach ($res as $key => $value) {
                           </tfoot>
                       </table>
                           </div>
-                          <diV class="column">
+                          <div class="column">
                             <div id="mapid"></div>
                           </div>
                       </div>
