@@ -150,9 +150,7 @@ foreach ($res as $key => $value) {
 				<footer class="card-footer">
 				  <p class="card-footer-item">
 					<span>
-					  <a class="button" href="https://api.whatsapp.com/send?phone=6282334059230&text=Halo%20saya%20butuh%20informasi%20lebih%20lanjut">Chat Whatsapp                 <span class="icon">
-                    <i class="fab fa-whatsapp"></i>
-                </span></a>
+					  <a class="button" href="https://api.whatsapp.com/send?phone=6282334059230&text=Halo%20saya%20butuh%20informasi%20lebih%20lanjut">Chat Whatsapp <i class="fab fa-whatsapp"></i></a>
 					</span>
 				  </p>
 				  <p class="card-footer-item">
