@@ -1,4 +1,4 @@
-<footer class="footer is-dark">
+<footer class="footer has-background-dark">
   <div class="content has-text-centered">
     <p>
       <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed

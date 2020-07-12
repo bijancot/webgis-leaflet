@@ -57,6 +57,7 @@ foreach ($res as $key => $value) {
 		#map {
 			width: 100%;
 			height: 400px;
+            padding: 20px;
 		}
 	</style>
 
@@ -154,6 +155,8 @@ foreach ($res as $key => $value) {
                       </table>
                           </div>
                           <diV class="column">
+                              <h5>Lokasi Properti</h5>
+                              <br/>
                             <div id="map"></div>
                           </div>
                       </div>
@@ -167,7 +170,7 @@ foreach ($res as $key => $value) {
 				  </p>
 				  <p class="card-footer-item">
 					<span>
-					  <a class="button" href="tel:(+62) 923-3405-9230">Telpon Kami Sekarang &nbsp;<i class="fab fa-phone"></i></a>
+					  <a class="button" href="tel:(+62) 923-3405-9230">Telpon Kami Sekarang &nbsp;<i class="fa fa-phone"></i></a>
 					</span>
 				  </p>
 				</footer>
@@ -190,7 +193,7 @@ foreach ($res as $key => $value) {
 		zoomOffset: -1
 	}).addTo(mymap);
 
-	L.marker([<?= $sult['Latitude']?>, <?= $sult['Longitude']?>]).addTo(mymap).bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
+	L.marker([<?= $sult['Latitude']?>, <?= $sult['Longitude']?>]).addTo(mymap).bindPopup("<b>Lokasi Properti</b><br /><?= $sult['NamaProperti']?>.").openPopup();
 
 </script>
 <?php break;}?>
