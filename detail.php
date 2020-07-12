@@ -4,9 +4,8 @@ require 'conn/koneksi.php';
 require 'layer/rupiah.php';
 $jenisProperti = $_GET['jenis'];
 $idProperti = $_GET['properti'];
-if(isset($_POST['user'])){
-    session_start();
-    $_SESSION["username"] = $_POST['user'];
+if(isset($_SESSION["username"])){
+    //do nothing
 }else{
     echo ("<script LANGUAGE='JavaScript'>
 window.alert('Oops kasih tau nama kamu dong, ;)');
