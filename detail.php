@@ -82,7 +82,9 @@ foreach ($res as $key => $value) {
 						</div>
 						<div class="column ">
 							<p class="title has-text-right">
-                                <?= rupiah($sult['Harga']);?>
+                                <?= rupiah($sult['Harga']);?><br/>
+                                <a class="button is-link" href="https://api.whatsapp.com/send?phone=6282334059230&text=Halo%20saya%20butuh%20informasi%20lebih%20lanjut">Chat Whatsapp &nbsp;&nbsp;<i class="fab fa-whatsapp"></i></a><br/>
+                                <a class="button is-info" href="tel:(+62) 923-3405-9230">Telpon Kami Sekarang &nbsp;<i class="fa fa-phone"></i></a>
 							</p>
 						</div>
 					</div>
