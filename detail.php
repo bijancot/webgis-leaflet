@@ -125,7 +125,7 @@ foreach ($res as $key => $value) {
                               </tr>
                               <tr>
                                 <td>Harga</td>
-                                <td><?=$sult['harga'];?></td>
+                                <td><?= rupiah($sult['harga'])?></td>
                               </tr>
                           </tbody>
                           <tfoot>
