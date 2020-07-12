@@ -15,7 +15,7 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item">
+      <a class="navbar-item" href="https://leafletjs.com/reference-1.6.0.html">
         Dokumentasi
       </a>
 	  </div>
