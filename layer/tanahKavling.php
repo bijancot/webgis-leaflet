@@ -1,5 +1,5 @@
 <?php
-include 'rupiah.php';
+
 
 echo "var greyIcon = new L.Icon({
 	iconUrl: 'icon/kavling.png',

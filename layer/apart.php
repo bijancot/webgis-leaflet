@@ -1,5 +1,5 @@
 <?php
-include 'rupiah.php';
+
 
 echo "var blackIcon = new L.Icon({
 	iconUrl: 'icon/apartment.png',
