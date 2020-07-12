@@ -19,7 +19,7 @@ $res = $cos->fetch_all(MYSQLI_ASSOC);
 $pho;
 $i=0;
 foreach ($res as $key => $value) {
-    echo $pho[$i]=$value['Foto'];
+   $pho[$i]=$value['Foto'];
     $i++;
 }
 ?>
@@ -88,7 +88,7 @@ foreach ($res as $key => $value) {
 					</div>
 					<div class="tile is-parent">
 					  <div class="tile is-child box">
-                        <img src="http://kristomoyo.com/leaflet<?=$pho[2]?>" class="image" alt="foto properti #3">
+                        <img src="http://kristomoyo.com/leaflet<?=$pho[2]?>" class="image is-16by9" alt="foto properti #3">
 					  </div>
 					</div>
 				  </div>
