@@ -21,7 +21,7 @@ $res = $cos->fetch_all(MYSQLI_ASSOC);
 
 $count = 0;
 foreach ($res as $key => $sult) {
-    echo "var part_kav_".$count." =     '<h6 class=\"".$sult['NamaJenis']."\">Tipe</h6>'+
+    echo "var part_kav_".$count." = '<h6 class=\"".$sult['NamaJenis']."\">Jenis Properti :</h6>".$sult['NamaJenis']."'+
     '<h3 class=\"title\">".$sult['NamaProperti']."</h3>'+
     '<br/>' +
     '<p>alamat Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis similique explicabo vero, commodi, sapiente quas praesentium quia eligendi sint aperiam maiores quisquam modi quo itaque ab amet aspernatur saepe! A.</p>' +
@@ -34,8 +34,8 @@ foreach ($res as $key => $sult) {
 	
 	echo "var customOptions_kav_".$count." =
         {
-        'maxWidth': '800',
-        'maxheight': '800',
+        'maxWidth': '400',
+        'maxheight': '400',
         'className' : 'custom_kav_".$count,"'
         }\n";
     echo "L.marker([".$sult['Latitude'].",".$sult['Longitude']."], {icon: blackIcon}).bindPopup(part_kav_".$count,", customOptions_kav_".$count.").addTo(apart);";
