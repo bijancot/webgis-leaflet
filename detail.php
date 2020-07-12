@@ -54,6 +54,7 @@ foreach ($res as $key => $value) {
 
 </head>
 <body>
+<?php require 'header.php'?>
 	<div class="container">
 		<section class="section">
 			<div class="card">
@@ -154,6 +155,6 @@ foreach ($res as $key => $value) {
                 <?php break;}?>
 		</section>
 	</div>
-    
+<?php require 'footer.php'?>
 </body>
 </html>
