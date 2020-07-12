@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require 'conn/koneksi.php';
 require 'layer/rupiah.php';
 $jenisProperti = $_GET['jenis'];
