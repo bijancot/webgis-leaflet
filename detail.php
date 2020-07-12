@@ -4,7 +4,7 @@ require 'conn/koneksi.php';
 require 'layer/rupiah.php';
 $jenisProperti = $_GET['jenis'];
 $idProperti = $_GET['properti'];
-if(isset($_SESSION["username"])){
+if($_SESSION["username"]!= null){
     //do nothing
 }else{
     echo ("<script LANGUAGE='JavaScript'>
