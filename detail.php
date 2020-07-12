@@ -103,7 +103,9 @@ foreach ($res as $key => $value) {
 				  </div>
 				  <br/>
 				  <div class="content">
-                      <table class="table">
+                      <div class="columns">
+                          <diV class="column">
+                          <table class="table">
                           <thead>
                             <tr>
                             <th>Atribut</th>
@@ -150,7 +152,11 @@ foreach ($res as $key => $value) {
                             </tr>
                           </tfoot>
                       </table>
-
+                          </div>
+                          <diV class="column">
+                            <div id="mapid"></div>
+                          </div>
+                      </div>
 				  </div>
 				</div>
 				<footer class="card-footer">
@@ -166,9 +172,28 @@ foreach ($res as $key => $value) {
 				  </p>
 				</footer>
               </div>
-                <?php break;}?>
+                
 		</section>
 	</div>
 <?php require 'footer.php'?>
+<script>
+
+	var mymap = L.map('mapid').setView([<?= $sult['Latitude']?>, <?= $sult['Longitude']?>], 13);
+
+	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		maxZoom: 18,
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox/streets-v11',
+		tileSize: 512,
+		zoomOffset: -1
+	}).addTo(mymap);
+
+	L.marker([<?= $sult['Latitude']?>, <?= $sult['Longitude']?>]).addTo(mymap)
+		.bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
+
+</script>
+<?php break;}?>
 </body>
 </html>
