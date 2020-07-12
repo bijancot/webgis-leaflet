@@ -1,4 +1,5 @@
 <?php
+include 'rupiah.php';
 
 echo "var blackIcon = new L.Icon({
 	iconUrl: 'icon/apartment.png',
@@ -24,15 +25,15 @@ foreach ($res as $key => $sult) {
     echo "var part_apart_".$count." = '<h6 class=\"".$sult['NamaJenis']."\">Jenis Properti : ".$sult['NamaJenis']."</h6>'+
     '<h3 class=\"title\">".$sult['NamaProperti']."</h3>'+
     '<p>Alamat Properti : ".$sult['Alamat_properti']."</p>' +
-    '<p>Harga : ".$sult['Harga']."</p>' +
+    '<p>Harga : ".rupiah($sult['Harga'])."</p>' +
     'Info Lebih lanjut :'+
     '<a href=\"detail.php?jenis=".$sult['JenisID']."&properti=".$sult['PropertiID']."\">Detail properti</a>'\n";
 
 	
 	echo "var customOptions_apart_".$count." =
         {
-        'maxWidth': '350',
-        'maxheight': '350',
+        'maxWidth': '300',
+        'maxheight': '300',
         'className' : 'custom_apart_".$count,"'
         }\n";
     echo "L.marker([".$sult['Latitude'].",".$sult['Longitude']."], {icon: blackIcon}).bindPopup(part_apart_".$count,", customOptions_apart_".$count.").addTo(apart);";
