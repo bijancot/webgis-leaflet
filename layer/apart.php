@@ -27,7 +27,7 @@ foreach ($res as $key => $sult) {
     '<p>Alamat Properti : ".$sult['Alamat_properti']."</p>' +
     '<p>Harga : ".rupiah($sult['Harga'])."</p>' +
     'Info Lebih lanjut :'+
-    '<a href=\"detail.php?jenis=".$sult['JenisID']."&properti=".$sult['PropertiID']."\">Detail properti</a>'\n";
+    '<a href=\"detail.php?jenis=".$sult['JenisID']."&properti=".$sult['PropertiID']."\">Detail properti</a>'\n;";
 
 	
 	echo "var customOptions_apart_".$count." =
