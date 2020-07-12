@@ -1,4 +1,5 @@
 <?php
+include 'rupiah.php';
 
 echo "var goldIcon = new L.Icon({
 	iconUrl: 'icon/villa.png',

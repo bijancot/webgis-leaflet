@@ -1,4 +1,5 @@
 <?php
+include 'rupiah.php';
 
 echo "var violetIcon = new L.Icon({
 	iconUrl: 'icon/ellite.png',
