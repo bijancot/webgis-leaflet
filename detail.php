@@ -7,6 +7,7 @@ $idProperti = $_GET['properti'];
 if($_SESSION["username"]!= null){
     //do nothing
 }else{
+    $base_url = "http://kristomoyo.com/leaflet";
     echo ("<script LANGUAGE='JavaScript'>
 window.alert('Oops kasih tau nama kamu dong, ;)');
 window.location.href='".$base_url."';
@@ -177,6 +178,8 @@ foreach ($res as $key => $value) {
 		</section>
 	</div>
 <?php require 'footer.php'?>
+</body>
+
 <script>
 
 	var mymap = L.map('mapid').setView([51.505, -0.09], 13);
@@ -219,6 +222,5 @@ foreach ($res as $key => $value) {
 	mymap.on('click', onMapClick);
 
 </script>
-<?php break;}?>
-</body>
 </html>
+<?php break;}?>
