@@ -1,0 +1,44 @@
+<?php
+
+echo "var icon_year = new L.Icon({
+	iconUrl: 'icon/year.png',
+	shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+	iconSize: [25, 41],
+	iconAnchor: [12, 41],
+	popupAnchor: [1, -34],
+	shadowSize: [41, 41]
+    });\n";
+    
+echo "var filter_tahun = L.layerGroup();\n";
+
+$tahun = "2014-11-14";
+$db = $mysqli->prepare("SELECT * FROM properti a join jenisProperti b on a.JenisID=b.JenisID where a.Tahun_bangun = ?");
+$db->bind_param("s",$tahun);
+$db->execute();
+
+$cos = $db->get_result();
+$res = $cos->fetch_all(MYSQLI_ASSOC);
+
+$count = 0;
+foreach ($res as $key => $sult) {
+	echo "\nvar part_kav_".$count." = '<h6 class=\"".$sult['NamaJenis']."\">Jenis Properti : ".$sult['NamaJenis']."</h6>'+
+    '<h4 class=\"title\">".$sult['NamaProperti']."</h4>'+
+    '<p>Alamat Properti : ".$sult['Alamat_properti']."</p>' +
+    '<p>Tahun Bangun : ".$sult['Tahun_bangun']."</p>' +
+    '<p>Harga : ".rupiah($sult['Harga'])."</p>' +
+    'Info Lebih lanjut :'+
+    '<a href=\"detail.php?jenis=".$sult['JenisID']."&properti=".$sult['PropertiID']."\">Detail properti</a>'\n";
+
+
+	
+	echo "var customOptions_kav_".$count." =
+        {
+        'maxWidth': '300',
+        'maxheight': '300',
+        'className' : 'custom_kav_".$count,"'
+        }\n";
+    echo "L.marker([".$sult['Latitude'].",".$sult['Longitude']."], {icon: icon_year}).bindPopup(part_kav_".$count,", customOptions_kav_".$count.").addTo(filter_tahun);";
+
+    $count++;
+}
+?>

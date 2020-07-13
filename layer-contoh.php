@@ -103,6 +103,7 @@ session_start();
 			require 'layer/rusun.php';
 			require 'layer/tanahKavling.php';
 			require 'layer/villa.php';
+			require 'filter/filter_tahun.php';
 	?>
 
 	var mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
@@ -162,7 +163,8 @@ session_start();
 		"Villa" : villa,
 		"Rumah Susun" : rusun,
 		"Tanah Kavling" : tnhKavling,
-		"Perumahan Ellite" : rmhEllite
+		"Perumahan Ellite" : rmhEllite,
+		"Tahun Bangun" : filter_tahun
 	};
 
 	// memasukkan semua controller ke peta
