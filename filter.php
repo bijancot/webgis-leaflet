@@ -19,7 +19,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Filter</title>
     <title>Propertikuuu - webgis</title>
     <h3> Silahkan Cari Kategori</h3>
 
@@ -69,7 +69,7 @@ session_start();
             <th>Harga Properti</th>
             <th>Luas Properti</th>
             <th>Jarak Properti dari Pusat Kota</th>
-            <th>Jumlah Cicila Properti</th>
+            <th>Jumlah Cicilan Properti</th>
             <th>Tahun Bangun Properti</th>
         </tr>
         <?php
