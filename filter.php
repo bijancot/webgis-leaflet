@@ -1,0 +1,104 @@
+<?php 
+session_start();
+		require 'conn/koneksi.php';
+		require 'layer/rupiah.php';
+		$base_url = "http://kristomoyo.com/leaflet";
+		if(isset($_POST['user'])){
+			$_SESSION["username"] = $_POST['user'];
+		}else if($_SESSION["username"]!= null){
+			//do nothing
+		}else{
+			echo ("<script LANGUAGE='JavaScript'>
+    window.alert('Oops kasih tau nama kamu dong, ;)');
+    window.location.href='".$base_url."';
+    </script>");
+		}
+    ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Propertikuuu - webgis</title>
+    <h3> Silahkan Cari Kategori</h3>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+
+
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+		}
+		#map {
+			width: 100%;
+			height: 400px;
+            padding: 20px;
+		}
+	</style>
+
+</head>
+<body>
+    <form action="filter.php" method="get">
+        <label>Cari :</label>
+        <input type="text" name="cari">
+        <input type="submit" value="Cari">
+    </form>
+    <?php
+    if(isset($_GET['cari'])){
+        $cari = $_GET['cari'];
+        echo "<b>Hasil Pencarian : ".$cari."</b>";
+    }
+    ?>
+
+    <table border="1">
+        <tr>
+            <th>No</th>
+            <th>Jenis Properti</th>
+            <th>Nama Properti</th>
+            <th>Alamat Properti</th>
+            <th>Harga Properti</th>
+            <th>Luas Properti</th>
+            <th>Jarak Properti dari Pusat Kota</th>
+            <th>Jumlah Cicila Properti</th>
+            <th>Tahun Bangun Properti</th>
+        </tr>
+        <?php
+        if(isset($_GET['cari'])){
+            $cari = $_GET['cari'];
+            $data = mysql_query("SELECT PropertiName, NamaProperti, Alamat_properti ,Harga, Luas, Jarak, Jumlah_cicil, Tahun_bangun FROM jenis_properti a JOIN properti b on a.PropertiID=b.PropertiID WHERE Harga like '%".$cari."%' AND Luas like '%".$cari."%' AND Jarak like '%".$cari."%' AND Jumlah_cicil like '%".$cari."%' AND Tahun_bangun like '%".$cari."%'");
+
+        } else{
+            $data = mysql_query("SELECT * FROM properti a join jenisProperti b on a.JenisID=b.JenisID");
+        }
+        $no = 1;
+        while($d = mysql_fetch_array($data)){
+        ?>
+            <tr>
+                <td><?php echo $no++; ?></td>
+                <td><?php echo $d['PropertiName']; ?></td>
+                <td><?php echo $d['NamaProperti']; ?></td>
+                <td><?php echo $d['Alamat_properti']; ?></td>
+                <td><?php echo $d['Harga']; ?></td>
+                <td><?php echo $d['Luas']; ?></td>
+                <td><?php echo $d['Jarak']; ?></td>
+                <td><?php echo $d['Jumlah_cicil']; ?></td>
+                <td><?php echo $d['Tahun_bangun']; ?></td>
+            </tr>
+
+            
+            <?php } ?>
+
+    </table>
+
+</body>
+</html>
