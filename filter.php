@@ -81,13 +81,24 @@ session_start();
         <?php
         if(isset($_GET['cari'])){
             $cari = $_GET['cari'];
-            $data = mysql_query("SELECT PropertiName, NamaProperti, Alamat_properti ,Harga, Luas, Jarak, Jumlah_cicil, Tahun_bangun FROM jenis_properti a JOIN properti b on a.PropertiID=b.PropertiID WHERE Harga like '%".$cari."%' OR Luas like '%".$cari."%' OR Jarak like '%".$cari."%' OR Jumlah_cicil like '%".$cari."%' OR Tahun_bangun like '%".$cari."%'");
+            // $data = mysql_query("SELECT PropertiName, NamaProperti, Alamat_properti ,Harga, Luas, Jarak, Jumlah_cicil, Tahun_bangun FROM jenis_properti a JOIN properti b on a.PropertiID=b.PropertiID WHERE Harga like '%".$cari."%' OR Luas like '%".$cari."%' OR Jarak like '%".$cari."%' OR Jumlah_cicil like '%".$cari."%' OR Tahun_bangun like '%".$cari."%'");
+            $db = $mysqli->prepare("SELECT PropertiName, NamaProperti, Alamat_properti ,Harga, Luas, Jarak, Jumlah_cicil, Tahun_bangun FROM jenis_properti a JOIN properti b on a.PropertiID=b.PropertiID WHERE Harga like '%".$cari."%' OR Luas like '%".$cari."%' OR Jarak like '%".$cari."%' OR Jumlah_cicil like '%".$cari."%' OR Tahun_bangun like '%".$cari."%'");
+            $db->bind_param("s",$jenis);
+            $db->execute();
 
+            $cos = $db->get_result();
+            $res = $cos->fetch_all(MYSQLI_ASSOC);
         } else{
-            $data = mysql_query("SELECT * FROM properti a join jenisProperti b on a.JenisID=b.JenisID");
+            // $data = mysql_query("SELECT * FROM properti a join jenisProperti b on a.JenisID=b.JenisID");
         }
-
-        $data = mysql_query("SELECT * FROM properti a join jenisProperti b on a.JenisID=b.JenisID");
+        $jenis = "asdasd";
+        $db = $mysqli->prepare("SELECT * FROM properti a join jenisProperti b on a.JenisID=b.JenisID where a.PropertiID!=?");
+        $db->bind_param("s",$jenis);
+        $db->execute();
+        
+        $cos = $db->get_result();
+        $res = $cos->fetch_all(MYSQLI_ASSOC);
+        // $data = mysql_query("SELECT * FROM properti a join jenisProperti b on a.JenisID=b.JenisID");
 
         var_dump($data);
         echo $no = 1;
