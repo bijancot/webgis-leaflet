@@ -92,6 +92,7 @@ session_start();
 
             $alamat = $_GET['Alamat_properti'];
             $harga = $_GET['Harga'];
+            $luas = $_GET['Luas'];
             $jarak = $_GET['Jarak'];
             $jumlahCicil = $_GET['Jumlah_cicil'];
             $tahunBangun = $_GET['Tahun_bangun'];
