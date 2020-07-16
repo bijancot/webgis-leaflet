@@ -109,15 +109,15 @@ session_start();
             $cos = $db->get_result();
             $res = $cos->fetch_all(MYSQLI_ASSOC);
         } else{
-            // $data = mysql_query("SELECT * FROM properti a join jenisProperti b on a.JenisID=b.JenisID");
+            $jenis = "asdasd";
+            $db = $mysqli->prepare("SELECT * FROM properti a join jenisProperti b on a.JenisID=b.JenisID where a.PropertiID!=?");
+            $db->bind_param("s",$jenis);
+            $db->execute();
+            
+            $cos = $db->get_result();
+            $res = $cos->fetch_all(MYSQLI_ASSOC);
         }
-        $jenis = "asdasd";
-        $db = $mysqli->prepare("SELECT * FROM properti a join jenisProperti b on a.JenisID=b.JenisID where a.PropertiID!=?");
-        $db->bind_param("s",$jenis);
-        $db->execute();
         
-        $cos = $db->get_result();
-        $res = $cos->fetch_all(MYSQLI_ASSOC);
 
         echo $no = 1;
         foreach ($res as $key => $d) {
