@@ -88,7 +88,9 @@ session_start();
         }
 
         $data = mysql_query("SELECT * FROM properti a join jenisProperti b on a.JenisID=b.JenisID");
-        $no = 1;
+
+        var_dump($data);
+        echo $no = 1;
         while($d = mysql_fetch_array($data)){
         ?>
             <tr>
