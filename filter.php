@@ -73,8 +73,8 @@ session_start();
             <th>Tahun Bangun Properti</th>
         </tr>
         <?php
-        if(isset($_GET['cari'])){
-            $cari = $_GET['cari'];
+        if(isset($_POST['cari'])){
+            $cari = $_POST['cari'];
             $data = mysql_query("SELECT PropertiName, NamaProperti, Alamat_properti ,Harga, Luas, Jarak, Jumlah_cicil, Tahun_bangun FROM jenis_properti a JOIN properti b on a.PropertiID=b.PropertiID WHERE Harga like '%".$cari."%' AND Luas like '%".$cari."%' AND Jarak like '%".$cari."%' AND Jumlah_cicil like '%".$cari."%' AND Tahun_bangun like '%".$cari."%'");
 
         } else{
