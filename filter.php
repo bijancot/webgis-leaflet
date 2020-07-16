@@ -50,7 +50,13 @@ session_start();
 <body>
     <form action="filter.php" method="get">
         <label>Cari :</label>
-        <input type="text" name="cari">
+        <input type="hidden" name="cari" value="true">
+        <input type="text" name="Alamat_properti" placeholder="alamat">
+        <input type="text" name="Harga" placeholder="Harga">
+        <input type="text" name="Luas" placeholder="Luas">
+        <input type="text" name="Jarak" placeholder="Jarak Ke Pusat Kota">
+        <input type="text" name="JumlahCicil" placeholder="Jumlah Cicil">
+        <input type="text" name="Tahun_bangun" placeholder="Tahun bangun">
         <input type="submit" value="Cari">
     </form>
     <?php
@@ -75,7 +81,7 @@ session_start();
         <?php
         if(isset($_GET['cari'])){
             $cari = $_GET['cari'];
-            $data = mysql_query("SELECT PropertiName, NamaProperti, Alamat_properti ,Harga, Luas, Jarak, Jumlah_cicil, Tahun_bangun FROM jenis_properti a JOIN properti b on a.PropertiID=b.PropertiID WHERE Harga like '%".$cari."%' AND Luas like '%".$cari."%' AND Jarak like '%".$cari."%' AND Jumlah_cicil like '%".$cari."%' AND Tahun_bangun like '%".$cari."%'");
+            $data = mysql_query("SELECT PropertiName, NamaProperti, Alamat_properti ,Harga, Luas, Jarak, Jumlah_cicil, Tahun_bangun FROM jenis_properti a JOIN properti b on a.PropertiID=b.PropertiID WHERE Harga like '%".$cari."%' OR Luas like '%".$cari."%' OR Jarak like '%".$cari."%' OR Jumlah_cicil like '%".$cari."%' OR Tahun_bangun like '%".$cari."%'");
 
         } else{
             $data = mysql_query("SELECT * FROM properti a join jenisProperti b on a.JenisID=b.JenisID");
