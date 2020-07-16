@@ -48,7 +48,7 @@ session_start();
 
 </head>
 <body>
-    <form action="filter.php" method="get">
+    <form action="filter2.php" method="get">
         <label>Cari :</label>
         <input type="hidden" name="cari" value="true">
         <input type="text" name="Alamat_properti" placeholder="alamat">
@@ -102,7 +102,7 @@ session_start();
         ?>
         <script>
             	var yellowIcon = new L.Icon({
-                iconUrl: 'https://github.com/pointhi/leaflet-color-markers/blob/master/img/marker-icon-2x-yellow.png',
+                iconUrl: 'https://raw.github.com/pointhi/leaflet-color-markers/blob/master/img/marker-icon-2x-yellow.png',
                 shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
                 iconSize: [25, 41],
                 iconAnchor: [12, 41],
