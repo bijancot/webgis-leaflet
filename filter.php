@@ -89,10 +89,6 @@ session_start();
             // $data = mysql_query("SELECT PropertiName, NamaProperti, Alamat_properti ,Harga, Luas, Jarak, Jumlah_cicil, Tahun_bangun FROM jenis_properti a JOIN properti b on a.PropertiID=b.PropertiID WHERE Harga like '%".$cari."%' OR Luas like '%".$cari."%' OR Jarak like '%".$cari."%' OR Jumlah_cicil like '%".$cari."%' OR Tahun_bangun like '%".$cari."%'");
             $db = $mysqli->prepare("SELECT * FROM jenisProperti a JOIN properti b on a.JenisID=b.JenisID WHERE Alamat_properti LIKE ? AND Harga like ? AND Luas like ? AND Jarak like ? AND Jumlah_cicil like ? AND Tahun_bangun like ? ");
             $db->bind_param("ssssss",$alamat,$harga,$luas,$jarak,$jumlahCicil,$tahunBangun);
-<<<<<<< HEAD
-=======
-
->>>>>>> f4a520f98e7bae83052ab33deae372e180697896
             var_dump($db);
             $alamat = "%".$_GET['Alamat_properti']."%";
             $harga = "%".$_GET['Harga']."%";
