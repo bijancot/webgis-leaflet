@@ -86,6 +86,8 @@ session_start();
         } else{
             $data = mysql_query("SELECT * FROM properti a join jenisProperti b on a.JenisID=b.JenisID");
         }
+
+        $data = mysql_query("SELECT * FROM properti a join jenisProperti b on a.JenisID=b.JenisID");
         $no = 1;
         while($d = mysql_fetch_array($data)){
         ?>
