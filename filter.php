@@ -98,11 +98,9 @@ session_start();
         
         $cos = $db->get_result();
         $res = $cos->fetch_all(MYSQLI_ASSOC);
-        // $data = mysql_query("SELECT * FROM properti a join jenisProperti b on a.JenisID=b.JenisID");
 
-        var_dump($res);
         echo $no = 1;
-        while($d = mysql_fetch_array($res)){
+        foreach ($res as $key => $d) {
         ?>
             <tr>
                 <td><?php echo $no++; ?></td>
