@@ -133,12 +133,7 @@ session_start();
 
 
 		// inisialisasi atau pemanggilan peta
-		var map = L.map('map', {
-		center: [-7.9089297, 112.5992162],
-		zoom: 14.25,
-		layers: [streets, apart]
-	});
-	map.flyTo([-7.9089297, 112.5992162], 14.25);
+	
 
 	// variabel penampung baselayers untuk controller di tampilan peta 
 	var baseLayers = {
@@ -183,6 +178,14 @@ session_start();
                 }
                 
                 ?>
+
+var map = L.map('map', {
+		center: [-7.9089297, 112.5992162],
+		zoom: 14.25,
+		layers: [streets, filter]
+	});
+	map.flyTo([-7.9089297, 112.5992162], 14.25);
+
                 L.control.layers(baseLayers).addTo(map);
         </script>
 
