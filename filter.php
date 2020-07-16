@@ -116,7 +116,6 @@ session_start();
         ?>
             <tr>
                 <td><?php echo $no++; ?></td>
-                <td><?php echo $d['PropertiName']; ?></td>
                 <td><?php echo $d['NamaProperti']; ?></td>
                 <td><?php echo $d['Alamat_properti']; ?></td>
                 <td><?php echo $d['Harga']; ?></td>
