@@ -90,6 +90,11 @@ session_start();
             $db = $mysqli->prepare("SELECT * FROM jenis_properti a JOIN properti b on a.PropertiID=b.PropertiID WHERE Harga like %?% OR Luas like %?% OR Jarak like %?% OR Jumlah_cicil like %?% OR Tahun_bangun like %?%");
             $db->bind_param("sssss",$alamat,$harga,$jarak,$jumlahCicil,$tahunBangun);
 
+            $alamat = $_GET['Alamat_properti'];
+            $harga = $_GET['Harga'];
+            $jarak = $_GET['Jarak'];
+            $jumlahCicil = $_GET['Jumlah_cicil'];
+            $tahunBangun = $_GET['Tahun_bangun'];
             $db->execute();
 
             $cos = $db->get_result();
