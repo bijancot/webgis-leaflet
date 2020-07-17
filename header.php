@@ -35,6 +35,9 @@
           <a class="button is-dark is-inverted">
             <strong>Hello <?= $_SESSION['username']?></strong>
           </a>
+          <a class="button is-dark is-inverted" href="filter2.php">
+            Filter Search <em>(new)</em>
+          </a>
           <a class="button is-light" href="logout.php">
             Log Out
           </a>

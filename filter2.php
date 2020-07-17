@@ -47,7 +47,10 @@ session_start();
 	</style>
 
 </head>
-<body>
+<body><?php require 'header.php'?>
+<div class="container">
+            <section class="section">
+                <div class="card">
     <form action="filter2.php" method="get">
         <label>Cari :</label>
         <input type="hidden" name="cari" value="true">
@@ -62,11 +65,15 @@ session_start();
     <?php
     if(isset($_GET['cari'])){
         $cari = $_GET['cari'];
-        echo "<b>Hasil Pencarian : ".$cari."</b>";
+        //echo "<b>Hasil Pencarian : ".$cari."</b>";
     }
     ?>
         <br/>
-        <div id="map"></div>
+                    <div id="map"></div>
+        </div>
+        </section>
+        </div>
+        <?php require 'footer.php'?>
         <?php
         if(isset($_GET['cari'])){
             $alamat = "%".$_GET['Alamat_properti']."%";
