@@ -51,7 +51,7 @@ session_start();
                 <div class="card">
                     <div class="card-content">
     <form action="filter2.php" method="get">
-        <h4>Filter search</h4></br>
+        <h2>Filter search</h2></br>
         <input type="hidden" name="cari" value="true">
         <div class="columns">
             <div class="column is-12"><input type="text" class="input medium" name="Alamat_properti" placeholder="alamat"></div>
