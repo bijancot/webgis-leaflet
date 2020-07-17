@@ -21,8 +21,6 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filter</title>
     <title>Propertikuuu - webgis</title>
-    <h3> Silahkan Cari Kategori</h3>
-
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
@@ -56,19 +54,19 @@ session_start();
         <h4>Filter search</h4></br>
         <input type="hidden" name="cari" value="true">
         <div class="columns">
-            <div class="column is-12"><input type="text" name="Alamat_properti" placeholder="alamat"></div>
+            <div class="column is-12"><input type="text" class="input medium" name="Alamat_properti" placeholder="alamat"></div>
         </div>
         <div class="columns">
-            <div class="column is-6"><input type="text" name="Harga" placeholder="Harga"></div>
-            <div class="column is-6"><input type="text" name="Luas" placeholder="Luas"></div>
+            <div class="column is-6"><input type="text" class="input medium" name="Harga" placeholder="Harga"></div>
+            <div class="column is-6"><input type="text" class="input medium" name="Luas" placeholder="Luas"></div>
         </div>
         <div class="columns">
-            <div class="column is-6"><input type="text" name="Jarak" placeholder="Jarak Ke Pusat Kota"></div>
-            <div class="column is-6"><input type="text" name="Jumlah_cicil" placeholder="Jumlah Cicil"></div>
+            <div class="column is-6"><input type="text" class="input medium" name="Jarak" placeholder="Jarak Ke Pusat Kota"></div>
+            <div class="column is-6"><input type="text" class="input medium" name="Jumlah_cicil" placeholder="Jumlah Cicil"></div>
         </div>
         <div class="columns">
-            <div class="column is-6"><input type="text" name="Tahun_bangun" placeholder="Tahun bangun"></div>
-            <div class="column is-6"><input class="button is-primary" type="submit" value="Cari"></div>
+            <div class="column is-6"><input type="text" class="input medium" name="Tahun_bangun" placeholder="Tahun bangun"></div>
+            <div class="column is-6"><input class="button is-primary is-fullwidth" type="submit" value="Cari"></div>
         </div>
         
     </form>
