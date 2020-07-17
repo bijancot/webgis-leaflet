@@ -51,16 +51,26 @@ session_start();
 <div class="container">
             <section class="section">
                 <div class="card">
+                    <div class="card-content">
     <form action="filter2.php" method="get">
-        <label>Cari :</label>
+        <h4>Filter search</h4></br>
         <input type="hidden" name="cari" value="true">
-        <input type="text" name="Alamat_properti" placeholder="alamat">
-        <input type="text" name="Harga" placeholder="Harga">
-        <input type="text" name="Luas" placeholder="Luas">
-        <input type="text" name="Jarak" placeholder="Jarak Ke Pusat Kota">
-        <input type="text" name="Jumlah_cicil" placeholder="Jumlah Cicil">
-        <input type="text" name="Tahun_bangun" placeholder="Tahun bangun">
-        <input type="submit" value="Cari">
+        <div class="columns">
+            <div class="column"><input type="text" name="Alamat_properti" placeholder="alamat"></div>
+        </div>
+        <div class="columns">
+            <div class="column"><input type="text" name="Harga" placeholder="Harga"></div>
+            <div class="column"><input type="text" name="Luas" placeholder="Luas"></div>
+        </div>
+        <div class="columns">
+            <div class="column"><input type="text" name="Jarak" placeholder="Jarak Ke Pusat Kota"></div>
+            <div class="column"><input type="text" name="Jumlah_cicil" placeholder="Jumlah Cicil"></div>
+        </div>
+        <div class="columns">
+            <div class="column"><input type="text" name="Tahun_bangun" placeholder="Tahun bangun"></div>
+            <div class="column"><input class="button is-primary" type="submit" value="Cari"></div>
+        </div>
+        
     </form>
     <?php
     if(isset($_GET['cari'])){
@@ -70,6 +80,7 @@ session_start();
     ?>
         <br/>
                     <div id="map"></div>
+                    </div>
         </div>
         </section>
         </div>
