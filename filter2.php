@@ -161,7 +161,10 @@ session_start();
         <?php
         if(isset($_GET['cari'])){
             $alamat = "%".$_GET['Alamat_properti']."%";
-
+            $qharga="=\"\"";
+            $qcicil="=\"\"";
+            $qjarak="=\"\"";
+            $qluas="=\"\"";
             if($_GET['harga']=="<50"){
                 $qharga = "< 50000000";
             }else if($_GET['harga']=="50sd300"){
