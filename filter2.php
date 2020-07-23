@@ -54,18 +54,39 @@ session_start();
         <h2 class="title">Filter search</h2></br>
         <input type="hidden" name="cari" value="true">
         <div class="columns">
+            <div class="field">
+            <label class="label">Alamat Properti</label>
             <div class="column is-12"><input type="text" class="input medium" name="Alamat_properti" placeholder="alamat"></div>
+            </div>
         </div>
         <div class="columns">
+            <div class="field">
+            <label class="label">Harga Properti</label>
             <div class="column is-6"><input type="text" class="input medium" name="Harga" placeholder="Harga"></div>
+            </div>
+
+            <div cass="field">
+            <label class="label">Luas Bangunan</label>
             <div class="column is-6"><input type="text" class="input medium" name="Luas" placeholder="Luas"></div>
+            </div>
         </div>
         <div class="columns">
+        <div class="field">
+        <label class="label">Jarak Ke Pusat Kota</label>
             <div class="column is-6"><input type="text" class="input medium" name="Jarak" placeholder="Jarak Ke Pusat Kota"></div>
-            <div class="column is-6"><input type="text" class="input medium" name="Jumlah_cicil" placeholder="Jumlah Cicil"></div>
+        </div>
+        <div class="field">
+        <label class="label">Jumlah cicilan</label>
+        <div class="column is-6"><input type="text" class="input medium" name="Jumlah_cicil" placeholder="Jumlah Cicil"></div>
+        </div>
         </div>
         <div class="columns">
+            <div class="field">
+            <label>
+                Tahun bangun properti
+            </label>
             <div class="column is-6"><input type="text" class="input medium" name="Tahun_bangun" placeholder="Tahun bangun"></div>
+            </div>
             <div class="column is-6"><input class="button is-primary is-fullwidth" type="submit" value="Cari"></div>
         </div>
         
