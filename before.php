@@ -69,37 +69,79 @@
         <br/><br/>
         <button class="button is-outlined is-black" onclick="location.href='layer-contoh.php'">MAPS</button>
         <br/><br/>
-        <table border="1" align="center" width="50%" class="table">
+        <table border="0" align="center" width="50%" class="table">
             <tr>
                 <th colspan="3" align="center"><p style="font-size:20px;">Beberapa fitur unggulan dalam webgis kami, yaitu :</p></th>
             </tr>
             <tr>
                 <td><b>1. </b></td>
-                <td><b>Filter</b><br/>Melakukan pencarian properti berdasarkan kategori tertentu </td>
-                <td>
-                    <br/>
-                        Alamat.<br/>
-                        Harga.<br/>
-                        Jarak Pusat Kota.<br/>
-                        Tahun Bangun Gedung.<br/>
-                        Luas Gedung.<br/>
-                        Jumlah Cicilan.
-                </td>
-            </tr>
-            <tr>
-                <td><b>2. </b></td>
                 <td><b>Data Properti Yang Lengkap</b><br/>Terdapat beragam informasi properti se malang raya</td>
                 <td><br/><a href="dataprop.php">Lihat Data</a></td>
             </tr>
             <tr>
-                <td><b>3. </b></td>
+                <td><b>2. </b></td>
                 <td><b>Detail Properti</b><br/>Detail Properti yang menarik, singkat dan juga jelas.</td>
                 <td> </td>
             </tr>
             <tr>
-                <td><b>4. </b></td>
+                <td><b>3. </b></td>
                 <td><b>Website Ringan</b><br/>Website yang sangat ringan ketika di akses.</td>
                 <td> </td>
+            </tr>
+            <tr>
+                <td><b>4. </b></td>
+                <td><b>Filter</b><br/>Melakukan pencarian properti berdasarkan kategori tertentu </td>
+                <td>
+                </td>
+            </tr>
+        </table>
+        <br/>
+        <p style="font-size:20px;"><b>Beberapa filter yang tersedia dalam webgis kami : </b></p>
+        <br/>
+        <table>
+            <tr>
+                <td>
+                    <fieldset>
+                        <p align="center">
+                            Alamat Properti
+                        </p>    
+                    </fieldset>
+                </td>
+                <td>
+                    <fieldset>
+                        <p align="center">
+                            Harga Properti
+                        </p>    
+                    </fieldset>
+                </td>
+                <td>
+                    <fieldset>
+                        <p align="center">
+                            Jarak Pusat Kota
+                        </p>    
+                    </fieldset>
+                </td>
+                <td>
+                    <fieldset>
+                        <p align="center">
+                            Tahun Bangun
+                        </p>    
+                    </fieldset>
+                </td>
+                <td>
+                    <fieldset>
+                        <p align="center">
+                            Luas Gedung
+                        </p>    
+                    </fieldset>
+                </td>
+                <td>
+                    <fieldset>
+                        <p align="center">
+                            Jumlah Cicilan
+                        </p>    
+                    </fieldset>
+                </td>
             </tr>
         </table>
    </center>
