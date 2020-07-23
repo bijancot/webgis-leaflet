@@ -78,8 +78,8 @@ session_start();
                     <div class="select">
                     <select name="luas">
                         <option value="<60">Kurang dari 60m2</option>
-                        <option value="50sd200">diantara 60m2 s.d 200m2</option>
-                        <option value=">200">Lebih dari 200jt</option>
+                        <option value="60sd200">diantara 60m2 s.d 200m2</option>
+                        <option value=">200">Lebih dari 200m2</option>
                     </select>
                     </div>
                 </div>
@@ -116,7 +116,7 @@ session_start();
                 <div class="field">
                     <label class="label">Tahun Bangunan</label>
                     <div class="select">
-                    <select name="jarak">
+                    <select name="tahun">
                         <option value="2005">2005</option>
                         <option value="2006">2006</option>
                         <option value="2007">2007</option>
@@ -157,12 +157,44 @@ session_start();
         if(isset($_GET['cari'])){
             $alamat = "%".$_GET['Alamat_properti']."%";
 
+            if($_GET['harga']=="<50"){
+                $qharga = "< 50000000";
+            }else if($_GET['harga']=="50sd300"){
+                $qharga = "between 50000000 and 300000000";
+            }else if($_GET['harga']==">300"){
+                $qharga = ">= 300000";
+            }
 
+            if($_GET['luas']=="<60"){
+                $qluas = "< 60";
+            }else if($_GET['luas']=="60sd200"){
+                $qluas = "between 60 and 200";
+            }else if($_GET['luas']==">200"){
+                $qluas = ">= 200";
+            }
+
+            if($_GET['jarak']=="<5"){
+                $qluas = "< 5";
+            }else if($_GET['jarak']=="5sd20"){
+                $qluas = "between 5 and 20";
+            }else if($_GET['jarak']==">20"){
+                $qluas = ">= 20";
+            }
+
+            if($_GET['jumlah_cicil']=="0"){
+                $qluas = "<= 0";
+            }else if($_GET['jumlah_cicil']=="0sd20"){
+                $qluas = "between 0 and 20";
+            }else if($_GET['jumlah_cicil']==">20"){
+                $qluas = ">= 20";
+            }
+            $tahun = $_GET['tahun'];
             // $data = mysql_query("SELECT PropertiName, NamaProperti, Alamat_properti ,Harga, Luas, Jarak, Jumlah_cicil, Tahun_bangun FROM jenis_properti a JOIN properti b on a.PropertiID=b.PropertiID WHERE Harga like '%".$cari."%' OR Luas like '%".$cari."%' OR Jarak like '%".$cari."%' OR Jumlah_cicil like '%".$cari."%' OR Tahun_bangun like '%".$cari."%'");
             // $db = $mysqli->prepare("SELECT * FROM jenisProperti a JOIN properti b on a.JenisID=b.JenisID WHERE Alamat_properti LIKE ? AND Harga $qarga AND Luas like ? AND Jarak like ? AND Jumlah_cicil like ? AND Tahun_bangun like ? ");
-            $db = $mysqli->prepare("SELECT * FROM jenisProperti a JOIN properti b on a.JenisID=b.JenisID WHERE Alamat_properti LIKE ? AND Harga $qarga AND Luas $qluas AND Jarak $qjarak AND Jumlah_cicil $qcicil AND Tahun_bangun $qtahun");
+            $db = $mysqli->prepare("SELECT * FROM jenisProperti a JOIN properti b on a.JenisID=b.JenisID WHERE Alamat_properti LIKE ? AND Harga $qarga AND Luas $qluas AND Jarak $qjarak AND Jumlah_cicil $qcicil AND Tahun_bangun = ?");
             $db->bind_param("s",$alamat);
             var_dump($db);
+            $tahun = $_GET['tahun'];
             $alamat = "%".$_GET['Alamat_properti']."%";
             $db->execute();
 
