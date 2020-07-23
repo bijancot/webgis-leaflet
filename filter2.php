@@ -66,7 +66,7 @@ session_start();
                     <label class="label">Harga Properti</label>
                     <div class="select">
                     <select name="harga">
-                    <option selected>Silahkan pilih</option>
+                    <option selected></option>
                         <option value="<50">Kurang dari 50jt</option>
                         <option value="50sd300">diantara 50jt s.d 300jt</option>
                         <option value=">300">Lebih dari 300jt</option>
@@ -78,7 +78,7 @@ session_start();
                     <label class="label">Luas Properti</label>
                     <div class="select">
                     <select name="luas">
-                    <option selected>Silahkan pilih</option>
+                    <option selected></option>
                         <option value="<60">Kurang dari 60m2</option>
                         <option value="60sd200">diantara 60m2 s.d 200m2</option>
                         <option value=">200">Lebih dari 200m2</option>
@@ -93,7 +93,7 @@ session_start();
                     <label class="label">Jarak Properti ke pusat kota</label>
                     <div class="select">
                     <select name="jarak">
-                    <option selected>Silahkan pilih</option>
+                    <option selected></option>
                         <option value="<5">Kurang dari 5KM</option>
                         <option value="5sd20">diantara 5KM s.d 20KM</option>
                         <option value=">20">Lebih dari 20KM</option>
@@ -106,7 +106,7 @@ session_start();
                     <label class="label">Jumlah Cicilan</label>
                     <div class="select">
                     <select name="jumlah_cicil">
-                    <option selected>Silahkan pilih</option>
+                    <option selected></option>
                         <option value="0">Tidak ada</option>
                         <option value="0sd20">sampai dengan 20x</option>
                         <option value=">20">Lebih dari 20x</option>
@@ -121,7 +121,7 @@ session_start();
                     <label class="label">Tahun Bangunan</label>
                     <div class="select">
                     <select name="tahun">
-                        <option selected>Silahkan pilih</option>
+                        <option selected></option>
                         <option value="2005">2005</option>
                         <option value="2006">2006</option>
                         <option value="2007">2007</option>
