@@ -197,9 +197,10 @@ session_start();
                 $qcicil = ">= 20";
             }
             $tahun = $_GET['tahun'];
+            $quer ="SELECT * FROM jenisProperti a JOIN properti b on a.JenisID=b.JenisID WHERE Alamat_properti LIKE ? AND Harga". $qarga ."AND Luas". $qluas ."AND Jarak". $qjarak ."AND Jumlah_cicil". $qcicil ."AND Tahun_bangun like ?";
             // $data = mysql_query("SELECT PropertiName, NamaProperti, Alamat_properti ,Harga, Luas, Jarak, Jumlah_cicil, Tahun_bangun FROM jenis_properti a JOIN properti b on a.PropertiID=b.PropertiID WHERE Harga like '%".$cari."%' OR Luas like '%".$cari."%' OR Jarak like '%".$cari."%' OR Jumlah_cicil like '%".$cari."%' OR Tahun_bangun like '%".$cari."%'");
             // $db = $mysqli->prepare("SELECT * FROM jenisProperti a JOIN properti b on a.JenisID=b.JenisID WHERE Alamat_properti LIKE ? AND Harga $qarga AND Luas like ? AND Jarak like ? AND Jumlah_cicil like ? AND Tahun_bangun like ? ");
-            $db = $mysqli->prepare("SELECT * FROM jenisProperti a JOIN properti b on a.JenisID=b.JenisID WHERE Alamat_properti LIKE ? AND Harga $qarga AND Luas $qluas AND Jarak $qjarak AND Jumlah_cicil $qcicil AND Tahun_bangun like ?");
+            $db = $mysqli->prepare($quer);
             $db->bind_param("ss",$alamat,$tahun);
             var_dump($db);
             $tahun = $_GET['tahun'];
