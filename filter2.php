@@ -63,37 +63,77 @@ session_start();
         </div>
         <div class="columns">
             <div class="column is-6">
-                <div class="field">
                     <label class="label">Harga Properti</label>
-                    <input type="text" class="input medium" name="Harga" placeholder="Harga">
-                </div>
+                    <div class="select">
+                    <select name="harga">
+                        <option value="<50">Kurang dari 50jt</option>
+                        <option value="50sd300">diantara 50jt s.d 300jt</option>
+                        <option value=">300">Lebih dari 300jt</option>
+                    </select>
+                    </div>
             </div>
             <div class="column is-6">
                 <div class="field">
                     <label class="label">Luas Properti</label>
-                    <input type="text" class="input medium" name="Luas" placeholder="Luas">
-                </div>
-            </div>
-        </div>
-        <div class="columns">
-            <div class="column is-6">
-                <div class="field">
-                    <label class="label">Luas Properti</label>
-                    <input type="text" class="input medium" name="Jarak" placeholder="Jarak Ke Pusat Kota">
-                </div>
-            </div>
-            <div class="column is-6">
-                <div class="field">
-                    <label class="label">Luas Properti</label>
-                    <input type="text" class="input medium" name="Jumlah_cicil" placeholder="Jumlah Cicil">
+                    <div class="select">
+                    <select name="luas">
+                        <option value="<60">Kurang dari 60m2</option>
+                        <option value="50sd200">diantara 60m2 s.d 200m2</option>
+                        <option value=">200">Lebih dari 200jt</option>
+                    </select>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="columns">
             <div class="column is-6">
                 <div class="field">
-                    <label class="label">Luas Properti</label>
-                    <input type="text" class="input medium" name="Tahun_bangun" placeholder="Tahun bangun">
+                    <label class="label">Jarak Properti ke pusat kota</label>
+                    <div class="select">
+                    <select name="jarak">
+                        <option value="<5">Kurang dari 5KM</option>
+                        <option value="5sd20">diantara 5KM s.d 20KM</option>
+                        <option value=">20">Lebih dari 20KM</option>
+                    </select>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-6">
+                <div class="field">
+                    <label class="label">Jumlah Cicilan</label>
+                    <div class="select">
+                    <select name="jumlah_cicil">
+                        <option value="0">Tidak ada</option>
+                        <option value="0sd20">sampai dengan 20x</option>
+                        <option value=">20">Lebih dari 20x</option>
+                    </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column is-6">
+                <div class="field">
+                    <label class="label">Tahun Bangunan</label>
+                    <div class="select">
+                    <select name="jarak">
+                        <option value="2005">2005</option>
+                        <option value="2006">2006</option>
+                        <option value="2007">2007</option>
+                        <option value="2008">2008</option>
+                        <option value="2009">2009</option>
+                        <option value="2010">2010</option>
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                    </select>
+                    </div>
                 </div>
             </div>
             <div class="column is-6"><input class="button is-primary is-fullwidth" type="submit" value="Cari"></div>
@@ -116,21 +156,14 @@ session_start();
         <?php
         if(isset($_GET['cari'])){
             $alamat = "%".$_GET['Alamat_properti']."%";
-            $harga = "%".$_GET['Harga']."%";
-            $luas = "%".$_GET['Luas']."%";
-            $jarak = "%".$_GET['Jarak']."%";
-            $jumlahCicil = "%".$_GET['Jumlah_cicil']."%";
-            $tahunBangun = "%".$_GET['Tahun_bangun']."%";
+
+
             // $data = mysql_query("SELECT PropertiName, NamaProperti, Alamat_properti ,Harga, Luas, Jarak, Jumlah_cicil, Tahun_bangun FROM jenis_properti a JOIN properti b on a.PropertiID=b.PropertiID WHERE Harga like '%".$cari."%' OR Luas like '%".$cari."%' OR Jarak like '%".$cari."%' OR Jumlah_cicil like '%".$cari."%' OR Tahun_bangun like '%".$cari."%'");
-            $db = $mysqli->prepare("SELECT * FROM jenisProperti a JOIN properti b on a.JenisID=b.JenisID WHERE Alamat_properti LIKE ? AND Harga like ? AND Luas like ? AND Jarak like ? AND Jumlah_cicil like ? AND Tahun_bangun like ? ");
-            $db->bind_param("ssssss",$alamat,$harga,$luas,$jarak,$jumlahCicil,$tahunBangun);
+            // $db = $mysqli->prepare("SELECT * FROM jenisProperti a JOIN properti b on a.JenisID=b.JenisID WHERE Alamat_properti LIKE ? AND Harga $qarga AND Luas like ? AND Jarak like ? AND Jumlah_cicil like ? AND Tahun_bangun like ? ");
+            $db = $mysqli->prepare("SELECT * FROM jenisProperti a JOIN properti b on a.JenisID=b.JenisID WHERE Alamat_properti LIKE ? AND Harga $qarga AND Luas $qluas AND Jarak $qjarak AND Jumlah_cicil $qcicil AND Tahun_bangun $qtahun");
+            $db->bind_param("s",$alamat);
             var_dump($db);
             $alamat = "%".$_GET['Alamat_properti']."%";
-            $harga = "%".$_GET['Harga']."%";
-            $luas = "%".$_GET['Luas']."%";
-            $jarak = "%".$_GET['Jarak']."%";
-            $jumlahCicil = "%".$_GET['Jumlah_cicil']."%";
-            $tahunBangun = "%".$_GET['Tahun_bangun']."%";
             $db->execute();
 
             $cos = $db->get_result();
