@@ -174,19 +174,19 @@ session_start();
             }
 
             if($_GET['jarak']=="<5"){
-                $qluas = "< 5";
+                $qjarak = "< 5";
             }else if($_GET['jarak']=="5sd20"){
-                $qluas = "between 5 and 20";
+                $qjarak = "between 5 and 20";
             }else if($_GET['jarak']==">20"){
-                $qluas = ">= 20";
+                $qjarak = ">= 20";
             }
 
             if($_GET['jumlah_cicil']=="0"){
-                $qluas = "<= 0";
+                $qcicil = "<= 0";
             }else if($_GET['jumlah_cicil']=="0sd20"){
-                $qluas = "between 0 and 20";
+                $qcicil = "between 0 and 20";
             }else if($_GET['jumlah_cicil']==">20"){
-                $qluas = ">= 20";
+                $qcicil = ">= 20";
             }
             $tahun = $_GET['tahun'];
             // $data = mysql_query("SELECT PropertiName, NamaProperti, Alamat_properti ,Harga, Luas, Jarak, Jumlah_cicil, Tahun_bangun FROM jenis_properti a JOIN properti b on a.PropertiID=b.PropertiID WHERE Harga like '%".$cari."%' OR Luas like '%".$cari."%' OR Jarak like '%".$cari."%' OR Jumlah_cicil like '%".$cari."%' OR Tahun_bangun like '%".$cari."%'");
