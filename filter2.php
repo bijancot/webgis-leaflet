@@ -62,15 +62,40 @@ session_start();
             </div>
         </div>
         <div class="columns">
-            <div class="column is-6"><input type="text" class="input medium" name="Harga" placeholder="Harga"></div>
-            <div class="column is-6"><input type="text" class="input medium" name="Luas" placeholder="Luas"></div>
+            <div class="column is-6">
+                <div class="field">
+                    <label class="label">Harga Properti</label>
+                    <input type="text" class="input medium" name="Harga" placeholder="Harga">
+                </div>
+            </div>
+            <div class="column is-6">
+                <div class="field">
+                    <label class="label">Luas Properti</label>
+                    <input type="text" class="input medium" name="Luas" placeholder="Luas">
+                </div>
+            </div>
         </div>
         <div class="columns">
-            <div class="column is-6"><input type="text" class="input medium" name="Jarak" placeholder="Jarak Ke Pusat Kota"></div>
-            <div class="column is-6"><input type="text" class="input medium" name="Jumlah_cicil" placeholder="Jumlah Cicil"></div>
+            <div class="column is-6">
+                <div class="field">
+                    <label class="label">Luas Properti</label>
+                    <input type="text" class="input medium" name="Jarak" placeholder="Jarak Ke Pusat Kota">
+                </div>
+            </div>
+            <div class="column is-6">
+                <div class="field">
+                    <label class="label">Luas Properti</label>
+                    <input type="text" class="input medium" name="Jumlah_cicil" placeholder="Jumlah Cicil">
+                </div>
+            </div>
         </div>
         <div class="columns">
-            <div class="column is-6"><input type="text" class="input medium" name="Tahun_bangun" placeholder="Tahun bangun"></div>
+            <div class="column is-6">
+                <div class="field">
+                    <label class="label">Luas Properti</label>
+                    <input type="text" class="input medium" name="Tahun_bangun" placeholder="Tahun bangun">
+                </div>
+            </div>
             <div class="column is-6"><input class="button is-primary is-fullwidth" type="submit" value="Cari"></div>
         </div>
         
